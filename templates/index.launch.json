@@ -176,7 +176,7 @@
             "title": "Vandfast",
             "content": "<p>Designet til vand, sved og saltvand</p>",
             "icon_width": 36,
-            "mobile_icon_width": 30
+            "mobile_icon_width": 32
           }
         },
         "icon-2": {
@@ -186,7 +186,7 @@
             "title": "Designet til hverdagen",
             "content": "<p>Smykker du kan have på hele dagen</p>",
             "icon_width": 36,
-            "mobile_icon_width": 30
+            "mobile_icon_width": 32
           }
         },
         "icon-3": {
@@ -196,7 +196,7 @@
             "title": "Clean Copenhagen design",
             "content": "<p>Stainless steel i minimalistisk udtryk</p>",
             "icon_width": 32,
-            "mobile_icon_width": 26
+            "mobile_icon_width": 28
           }
         },
         "icon-4": {
@@ -206,7 +206,7 @@
             "title": "Perfekt til rejser og sport",
             "content": "<p>Letvægtsdesign der følger dig overalt</p>",
             "icon_width": 36,
-            "mobile_icon_width": 30
+            "mobile_icon_width": 32
           }
         }
       },

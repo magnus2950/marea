@@ -39,7 +39,7 @@
           "settings": {
             "text": "Vandfast i stainless steel",
             "custom_icon": "shopify://shop_images/icon-waterproof.png",
-            "icon_width": 22
+            "icon_width": 24
           }
         },
         "feature-2": {
@@ -47,7 +47,7 @@
           "settings": {
             "text": "Designet i København",
             "icon": "picto-jewelry",
-            "icon_width": 22
+            "icon_width": 24
           }
         },
         "feature-3": {
@@ -55,7 +55,7 @@
           "settings": {
             "text": "365 dages kvalitetsgaranti",
             "icon": "picto-shield",
-            "icon_width": 22
+            "icon_width": 24
           }
         },
         "separator-2": {

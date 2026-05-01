@@ -70,17 +70,6 @@
             "circle_button_background": "#FFFDF9",
             "circle_button_icon": "#22313A"
           }
-        },
-        "scheme-5": {
-          "settings": {
-            "background": "#BFD9DB",
-            "background_gradient": "",
-            "text_color": "#22313A",
-            "primary_button_background": "#22313A",
-            "primary_button_text_color": "#FFFDF9",
-            "circle_button_background": "#FFFDF9",
-            "circle_button_icon": "#22313A"
-          }
         }
       },
       "success_color": "#3F7A4E",
