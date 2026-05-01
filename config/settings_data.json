@@ -12,61 +12,86 @@
   "installed_preset_name": "Prestige",
   "presets": {
     "Prestige": {
-      "section_vertical_spacing": "md",
-      "heading_font": "instrument_sans_n4",
-      "heading_letter_spacing": 18,
-      "text_font": "nunito_n4",
-      "text_font_size_desktop": 14,
-      "button_letter_spacing": 18,
+      "section_vertical_spacing": "lg",
+      "heading_font": "cormorant_garamond_n4",
+      "heading_text_transform": "normal",
+      "heading_letter_spacing": 0,
+      "heading_font_size_factor": 1.1,
+      "text_font": "inter_n4",
+      "text_font_size_desktop": 15,
+      "text_font_size_mobile": 14,
+      "text_font_letter_spacing": 0,
+      "button_text_font": "body",
+      "button_letter_spacing": 8,
+      "icon_stroke_width": 1,
+      "product_image_aspect_ratio": "portrait",
+      "product_card_text_font": "body",
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#efefef",
-            "text_color": "#1c1c1c",
-            "primary_button_background": "#1c1c1c",
-            "primary_button_text_color": "#ffffff",
-            "circle_button_background": "#ffffff",
-            "circle_button_icon": "#1c1c1c"
+            "background": "#FFFDF9",
+            "background_gradient": "",
+            "text_color": "#22313A",
+            "primary_button_background": "#22313A",
+            "primary_button_text_color": "#FFFDF9",
+            "circle_button_background": "#FFFDF9",
+            "circle_button_icon": "#22313A"
           }
         },
         "scheme-2": {
           "settings": {
-            "background": "#ffffff",
-            "text_color": "#1c1c1c",
-            "primary_button_background": "#1c1c1c",
-            "primary_button_text_color": "#ffffff",
-            "circle_button_background": "#ffffff",
-            "circle_button_icon": "#1c1c1c"
+            "background": "#E8D8C2",
+            "background_gradient": "",
+            "text_color": "#22313A",
+            "primary_button_background": "#22313A",
+            "primary_button_text_color": "#FFFDF9",
+            "circle_button_background": "#FFFDF9",
+            "circle_button_icon": "#22313A"
           }
         },
         "scheme-3": {
           "settings": {
-            "background": "#1c1c1c",
-            "text_color": "#ffffff",
-            "primary_button_background": "#ffffff",
-            "primary_button_text_color": "#1c1c1c",
-            "circle_button_background": "#ffffff",
-            "circle_button_icon": "#1c1c1c"
+            "background": "#22313A",
+            "background_gradient": "",
+            "text_color": "#FFFDF9",
+            "primary_button_background": "#FFFDF9",
+            "primary_button_text_color": "#22313A",
+            "circle_button_background": "#FFFDF9",
+            "circle_button_icon": "#22313A"
           }
         },
         "scheme-4": {
           "settings": {
             "background": "rgba(0,0,0,0)",
-            "text_color": "#ffffff",
-            "primary_button_background": "#ffffff",
-            "primary_button_text_color": "#1c1c1c",
-            "circle_button_background": "#ffffff",
-            "circle_button_icon": "#1c1c1c"
+            "background_gradient": "",
+            "text_color": "#FFFDF9",
+            "primary_button_background": "#FFFDF9",
+            "primary_button_text_color": "#22313A",
+            "circle_button_background": "#FFFDF9",
+            "circle_button_icon": "#22313A"
+          }
+        },
+        "scheme-5": {
+          "settings": {
+            "background": "#BFD9DB",
+            "background_gradient": "",
+            "text_color": "#22313A",
+            "primary_button_background": "#22313A",
+            "primary_button_text_color": "#FFFDF9",
+            "circle_button_background": "#FFFDF9",
+            "circle_button_icon": "#22313A"
           }
         }
       },
-      "success_color": "#307a07",
-      "warning_color": "#ed8a00",
-      "error_color": "#cb2b2b",
-      "product_rating_color": "#1c1c1c",
-      "product_on_sale_accent": "#e32c2b",
-      "product_sold_out_badge_background": "#efefef",
-      "product_custom_badge_background": "#1c1c1c"
+      "success_color": "#3F7A4E",
+      "warning_color": "#C8A96A",
+      "error_color": "#B5453B",
+      "product_rating_color": "#C8A96A",
+      "product_on_sale_accent": "#B5453B",
+      "product_sold_out_badge_background": "#E8D8C2",
+      "product_custom_badge_background": "#22313A",
+      "social_instagram": "https://www.instagram.com/mareajewellerycph/",
+      "social_tiktok": ""
     },
     "Couture": {
       "section_vertical_spacing": "md",
