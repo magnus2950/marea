@@ -2,3 +2,9 @@
 .shopifyignore
 *.log
 .env
+
+# Secrets
+.env
+.env.local
+_brand/admin-content/.tmp/
+scripts/
