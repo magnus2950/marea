@@ -5,13 +5,14 @@
       "settings": {
         "color_scheme": "scheme-4",
         "separate_section_with_border": false,
-        "image_size": "fill",
+        "image_size": "lg",
+        "image": "shopify://shop_images/marea-hero.jpg",
         "subheading": "MAREA · SS26",
         "title": "Coming soon",
         "content": "<p>Bliv den første til at få besked om åbningen.<br>Tilmeld dig nyhedsbrevet og deltag i konkurrencen om valgfrie smykker for 1.000 kr.</p>",
         "button_text": "Skriv mig op",
         "overlay_color": "#22313A",
-        "overlay_opacity": 35
+        "overlay_opacity": 30
       }
     },
     "usp-icons": {
@@ -72,43 +73,46 @@
         "image-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/marea-brandstory.jpg",
             "color_scheme": "scheme-4",
             "column_count": "4",
             "row_count": 1,
-            "title": "Vandfaste smykker",
+            "title": "Hud + vand",
             "heading_tag": "h4",
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#22313A",
-            "overlay_opacity": 20
+            "overlay_opacity": 25
           }
         },
         "image-2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/marea-product-flatlay.jpg",
             "color_scheme": "scheme-4",
             "column_count": "4",
             "row_count": 1,
-            "title": "Kæder &amp; hoops",
+            "title": "Produkt + strand",
             "heading_tag": "h4",
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#22313A",
-            "overlay_opacity": 20
+            "overlay_opacity": 25
           }
         },
         "image-3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/marea-lifestyle-waterside.jpg",
             "color_scheme": "scheme-4",
             "column_count": "4",
             "row_count": 1,
-            "title": "Smykker SS26",
+            "title": "Sport + glow",
             "heading_tag": "h4",
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#22313A",
-            "overlay_opacity": 20
+            "overlay_opacity": 25
           }
         }
       },

@@ -6,6 +6,7 @@
         "slide-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/marea-hero.jpg",
             "subheading": "SS26 LAUNCH",
             "title": "No need to take it off.",
             "content": "<p>Vandfaste smykker designet til bad, sport, strand og hverdag. Smykker du kan beholde på.</p>",
@@ -78,6 +79,7 @@
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "reveal_on_scroll": true,
+        "image": "shopify://shop_images/marea-brandstory.jpg",
         "image_position": "start",
         "content_width": "sm",
         "text_alignment": "start"
@@ -89,28 +91,31 @@
         "column-1": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/marea-lifestyle-sport.jpg",
             "title": "No Need To Take It Off",
             "heading_tag": "h4",
             "content": "<p>Hovedbudskabet bag launch — fra workout til weekend.</p>",
             "link_text": "Shop campaign",
-            "link_url": "shopify://collections/all",
+            "link_url": "shopify://collections/ss26-launch",
             "link_style": "link"
           }
         },
         "column-2": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/marea-product-flatlay.jpg",
             "title": "The Everyday Stack",
             "heading_tag": "h4",
             "content": "<p>Fokus på styling, sæt og smykker du bruger igen og igen.</p>",
             "link_text": "Shop the stack",
-            "link_url": "shopify://collections/all",
+            "link_url": "shopify://collections/everyday-stack",
             "link_style": "link"
           }
         },
         "column-3": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/marea-lifestyle-waterside.jpg",
             "title": "Made For Summer Skin",
             "heading_tag": "h4",
             "content": "<p>Wet look, glow og sommerstemning til strande, vand og solskinsdage.</p>",
@@ -219,6 +224,7 @@
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
         "image_size": "md",
+        "image": "shopify://shop_images/marea-newsletter-bg.jpg",
         "subheading": "Bliv en del af MAREA",
         "title": "Hør om nye drops først",
         "content": "<p>Tilmeld dig nyhedsbrevet og få early access til SS26, nyheder og inspiration.</p>",
