@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -38,24 +47,37 @@
           "type": "feature_with_icon",
           "settings": {
             "text": "Vandfast i stainless steel",
+            "link": "",
+            "icon": "none",
             "custom_icon": "shopify://shop_images/icon-waterproof.png",
-            "icon_width": 24
+            "icon_width": 24,
+            "background": "#ffffff",
+            "text_color": "#6b6b6b",
+            "border_color": ""
           }
         },
         "feature-2": {
           "type": "feature_with_icon",
           "settings": {
             "text": "Designet i København",
+            "link": "",
             "icon": "picto-jewelry",
-            "icon_width": 24
+            "icon_width": 24,
+            "background": "#ffffff",
+            "text_color": "#6b6b6b",
+            "border_color": ""
           }
         },
         "feature-3": {
           "type": "feature_with_icon",
           "settings": {
             "text": "365 dages kvalitetsgaranti",
+            "link": "",
             "icon": "picto-shield",
-            "icon_width": 24
+            "icon_width": 24,
+            "background": "#ffffff",
+            "text_color": "#6b6b6b",
+            "border_color": ""
           }
         },
         "separator-2": {
@@ -67,7 +89,10 @@
           "settings": {
             "hide_sold_out_variants": false,
             "selector_style": "block",
-            "swatch_selector_style": "swatch"
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "variant_image_show_underline": false,
+            "size_chart_page": ""
           }
         },
         "quantity_selector": {
@@ -77,8 +102,12 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": false
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#002e6d",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "#ffffff",
+            "payment_button_text_color": "#002e6d"
           }
         },
         "shipping-info": {
@@ -97,7 +126,9 @@
             "show_below_gallery": false,
             "icon": "picto-info",
             "title": "Beskrivelse",
-            "content": "<p>Et tidløst smykke designet til at blive på dig — fra morgenkaffe til strand og hverdag. Lavet i højkvalitets stainless steel der ikke ruster, anløber eller mister sin glans.</p><p>Style det alene eller som del af din everyday stack.</p>"
+            "content": "<p>Et tidløst smykke designet til at blive på dig — fra morgenkaffe til strand og hverdag. Lavet i højkvalitets stainless steel der ikke ruster, anløber eller mister sin glans.</p><p>Style det alene eller som del af din everyday stack.</p>",
+            "liquid": "",
+            "page": ""
           }
         },
         "accordion-care": {
@@ -106,7 +137,9 @@
             "show_below_gallery": false,
             "icon": "picto-leaf",
             "title": "Pleje",
-            "content": "<p>MAREA-smykker er vandfaste — du kan have dem på til bad, sport, strand og rejser.</p><p>For at holde dem smukke længst muligt:</p><ul><li>Skyl efter saltvand og klor</li><li>Opbevar dem tørt når de ikke er i brug</li><li>Undgå direkte kontakt med parfume og cremer</li><li>Brug dem ofte — og pas godt på dem</li></ul>"
+            "content": "<p>MAREA-smykker er vandfaste — du kan have dem på til bad, sport, strand og rejser.</p><p>For at holde dem smukke længst muligt:</p><ul><li>Skyl efter saltvand og klor</li><li>Opbevar dem tørt når de ikke er i brug</li><li>Undgå direkte kontakt med parfume og cremer</li><li>Brug dem ofte — og pas godt på dem</li></ul>",
+            "liquid": "",
+            "page": ""
           }
         },
         "accordion-shipping": {
@@ -115,7 +148,9 @@
             "show_below_gallery": false,
             "icon": "picto-delivery-truck",
             "title": "Levering &amp; retur",
-            "content": "<p><strong>Levering:</strong> 1-3 hverdage til Danmark. Fri fragt ved køb over 499 kr.</p><p><strong>Retur:</strong> 30 dages fortrydelsesret. Smykker skal returneres ubrugte og i original emballage.</p>"
+            "content": "<p><strong>Levering:</strong> 1-3 hverdage til Danmark. Fri fragt ved køb over 499 kr.</p><p><strong>Retur:</strong> 30 dages fortrydelsesret. Smykker skal returneres ubrugte og i original emballage.</p>",
+            "liquid": "",
+            "page": ""
           }
         },
         "complementary_products": {
@@ -153,6 +188,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "allow_transparent_header": false,
+        "transparent_header_use_primary_colors": false,
         "container_size": "lg",
         "product_info_size": 42,
         "show_sticky_add_to_cart": true,
@@ -171,16 +207,21 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
-        "subheading": "",
-        "title": "Du vil måske også lide",
+        "hide_product_information": false,
+        "stack_products": false,
         "recommendations_count": 4,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "stack_products": false
+        "subheading": "",
+        "title": "Du vil måske også lide",
+        "content": ""
       }
     }
   },
-  "order": ["main", "you-may-like"]
+  "order": [
+    "main",
+    "you-may-like"
+  ]
 }
