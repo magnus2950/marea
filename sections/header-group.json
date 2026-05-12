@@ -43,7 +43,7 @@
         "reduce_padding": false,
         "logo": "shopify://shop_images/Design_uden_navn_4.png",
         "logo_max_width": 180,
-        "logo_mobile_max_width": 110,
+        "logo_mobile_max_width": 120,
         "menu": "main-menu",
         "secondary_menu": "",
         "sidebar_menu": "",
