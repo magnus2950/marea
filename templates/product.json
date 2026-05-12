@@ -124,7 +124,7 @@
           "type": "accordion",
           "settings": {
             "show_below_gallery": false,
-            "icon": "picto-info",
+            "icon": "none",
             "title": "Beskrivelse",
             "content": "<p>Et tidløst smykke designet til at blive på dig — fra morgenkaffe til strand og hverdag. Lavet i højkvalitets stainless steel der ikke ruster, anløber eller mister sin glans.</p><p>Style det alene eller som del af din everyday stack.</p>",
             "liquid": "",
@@ -135,7 +135,7 @@
           "type": "accordion",
           "settings": {
             "show_below_gallery": false,
-            "icon": "picto-leaf",
+            "icon": "none",
             "title": "Pleje",
             "content": "<p>MAREA-smykker er vandfaste — du kan have dem på til bad, sport, strand og rejser.</p><p>For at holde dem smukke længst muligt:</p><ul><li>Skyl efter saltvand og klor</li><li>Opbevar dem tørt når de ikke er i brug</li><li>Undgå direkte kontakt med parfume og cremer</li><li>Brug dem ofte — og pas godt på dem</li></ul>",
             "liquid": "",
@@ -146,8 +146,8 @@
           "type": "accordion",
           "settings": {
             "show_below_gallery": false,
-            "icon": "picto-delivery-truck",
-            "title": "Levering &amp; retur",
+            "icon": "none",
+            "title": "Levering & retur",
             "content": "<p><strong>Levering:</strong> 1-3 hverdage til Danmark. Fri fragt ved køb over 499 kr.</p><p><strong>Retur:</strong> 30 dages fortrydelsesret. Smykker skal returneres ubrugte og i original emballage.</p>",
             "liquid": "",
             "page": ""
