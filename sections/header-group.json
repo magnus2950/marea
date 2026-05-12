@@ -45,7 +45,7 @@
         "logo_max_width": 180,
         "logo_mobile_max_width": 120,
         "menu": "main-menu",
-        "secondary_menu": "",
+        "secondary_menu": "secondary-menu",
         "sidebar_menu": "",
         "customer_account_menu": "customer-account-main-menu",
         "menu_open_trigger": "hover",
