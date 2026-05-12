@@ -18,6 +18,7 @@
             "image": "shopify://shop_images/marea-hero.jpg",
             "subheading": "SS26 LAUNCH",
             "title": "No need to take it off.",
+            "content": "<p>Vandfaste smykker designet til bad, sport, strand og hverdag. MAREA er smykker, du kan beholde på.</p>",
             "mobile_text_position": "place-self-end-start text-start",
             "desktop_text_position": "sm:place-self-center-start sm:text-start",
             "content_max_width": 560,

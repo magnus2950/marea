@@ -34,6 +34,7 @@
         "logo_max_width": 180,
         "logo_mobile_max_width": 110,
         "menu": "main-menu",
+        "secondary_menu": "secondary-menu",
         "menu_open_trigger": "hover",
         "menu_text_font": "body",
         "enable_search": true,

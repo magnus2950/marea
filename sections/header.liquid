@@ -227,6 +227,22 @@
       -%}
 
       <ul class="contents unstyled-list">
+        {%- assign secondary_menu = section.settings.secondary_menu -%}
+        {%- if secondary_menu.links.size > 0 -%}
+          {%- for link in secondary_menu.links -%}
+            <li class="header__secondary-nav-item md-max:hidden">
+              <a
+                href="{{ link.url }}"
+                data-title="{{ link.title | escape }}"
+                class="block {% if section.settings.menu_text_font == 'heading' %}h6{% endif %}"
+                {% if link.current %}aria-current="page"{% endif %}
+              >
+                {{- link.title -}}
+              </a>
+            </li>
+          {%- endfor -%}
+        {%- endif -%}
+
         {%- if show_country_selector or show_locale_selector -%}
           <li class="localization-selectors md-max:hidden">
             {%- if show_country_selector -%}
@@ -411,6 +427,12 @@
       "id": "menu",
       "label": "t:sections.header.menu",
       "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "secondary_menu",
+      "label": "Secondary menu (right of logo)",
+      "info": "Links shown to the right of the logo, before the icons (e.g. Om MAREA, Journal)"
     },
     {
       "type": "link_list",
