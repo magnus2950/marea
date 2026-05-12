@@ -29,7 +29,7 @@
         "enable_sticky": false,
         "autoplay": false,
         "cycle_speed": 5,
-        "desktop_font_size": 11,
+        "desktop_font_size": 12,
         "mobile_font_size": 10
       }
     },
@@ -52,7 +52,7 @@
         "menu_text_font": "heading",
         "enable_search": true,
         "sidebar_color_scheme": "scheme-1",
-        "sidebar_text_font": "body",
+        "sidebar_text_font": "heading",
         "sidebar_show_dividers": false,
         "sidebar_open_second_level_menus": false,
         "layout": "logo_center_navigation_inline",
