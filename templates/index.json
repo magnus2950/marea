@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero-newsletter": {
@@ -9,9 +18,9 @@
         "image": "shopify://shop_images/marea-hero.jpg",
         "subheading": "MAREA · SS26",
         "title": "Coming soon",
-        "content": "<p>Bliv den første til at få besked om åbningen.<br>Tilmeld dig nyhedsbrevet og deltag i konkurrencen om valgfrie smykker for 1.000 kr.</p>",
+        "content": "<p>Bliv den første til at få besked om åbningen.<br/>Tilmeld dig nyhedsbrevet og deltag i konkurrencen om valgfrie smykker for 1.000 kr.</p>",
         "button_text": "Skriv mig op",
-        "overlay_color": "#22313A",
+        "overlay_color": "#22313a",
         "overlay_opacity": 30
       }
     },
@@ -21,49 +30,60 @@
         "icon-waterproof": {
           "type": "item",
           "settings": {
+            "icon": "picto-award-gift",
             "custom_icon": "shopify://shop_images/icon-waterproof.png",
-            "title": "Waterproof",
-            "content": "<p>Designet til vand, saltvand og sved</p>",
             "icon_width": 40,
-            "mobile_icon_width": 32
+            "mobile_icon_width": 32,
+            "title": "Waterproof",
+            "content": "<p>Designet til vand, saltvand og sved</p>"
           }
         },
         "icon-everyday": {
           "type": "item",
           "settings": {
+            "icon": "picto-award-gift",
             "custom_icon": "shopify://shop_images/icon-everyday.png",
-            "title": "Everyday",
-            "content": "<p>Smykker du kan have på hele dagen</p>",
             "icon_width": 40,
-            "mobile_icon_width": 32
+            "mobile_icon_width": 32,
+            "title": "Everyday",
+            "content": "<p>Smykker du kan have på hele dagen</p>"
           }
         },
         "icon-sport-sea": {
           "type": "item",
           "settings": {
+            "icon": "picto-award-gift",
             "custom_icon": "shopify://shop_images/icon-sport-sea.png",
-            "title": "Sport & Sea",
-            "content": "<p>Skabt til et aktivt liv</p>",
             "icon_width": 40,
-            "mobile_icon_width": 32
+            "mobile_icon_width": 32,
+            "title": "Sport & Sea",
+            "content": "<p>Skabt til et aktivt liv</p>"
           }
         },
         "icon-ss26": {
           "type": "item",
           "settings": {
+            "icon": "picto-award-gift",
             "custom_icon": "shopify://shop_images/icon-ss26.png",
-            "title": "SS26",
-            "content": "<p>Opening soon · MAREA Jewellery Copenhagen</p>",
             "icon_width": 40,
-            "mobile_icon_width": 32
+            "mobile_icon_width": 32,
+            "title": "SS26",
+            "content": "<p>Opening soon · MAREA Jewellery Copenhagen</p>"
           }
         }
       },
-      "block_order": ["icon-waterproof", "icon-everyday", "icon-sport-sea", "icon-ss26"],
+      "block_order": [
+        "icon-waterproof",
+        "icon-everyday",
+        "icon-sport-sea",
+        "icon-ss26"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "stack_on_mobile": false,
+        "icon_color": "",
+        "text_color": "",
         "text_alignment": "center"
       }
     },
@@ -73,57 +93,76 @@
         "image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/marea-brandstory.jpg",
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/marea-brandstory.jpg",
             "column_count": "4",
             "row_count": 1,
+            "add_padding": false,
             "title": "Hud + vand",
             "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "overlay_color": "#22313A",
+            "overlay_color": "#22313a",
             "overlay_opacity": 25
           }
         },
         "image-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/marea-product-flatlay.jpg",
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/marea-product-flatlay.jpg",
             "column_count": "4",
             "row_count": 1,
+            "add_padding": false,
             "title": "Produkt + strand",
             "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "overlay_color": "#22313A",
+            "overlay_color": "#22313a",
             "overlay_opacity": 25
           }
         },
         "image-3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/marea-lifestyle-waterside.jpg",
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/marea-lifestyle-waterside.jpg",
             "column_count": "4",
             "row_count": 1,
+            "add_padding": false,
             "title": "Sport + glow",
             "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
-            "overlay_color": "#22313A",
+            "overlay_color": "#22313a",
             "overlay_opacity": 25
           }
         }
       },
-      "block_order": ["image-1", "image-2", "image-3"],
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "desktop_row_height": 360,
         "mobile_row_height": 220,
         "section_width": "lg",
-        "spacing": "sm"
+        "spacing": "sm",
+        "subheading": "",
+        "title": "Media grid",
+        "content": ""
       }
     },
     "tagline": {
@@ -149,9 +188,13 @@
           }
         }
       },
-      "block_order": ["subheading-1", "heading-1", "richtext-1"],
+      "block_order": [
+        "subheading-1",
+        "heading-1",
+        "richtext-1"
+      ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
@@ -159,5 +202,10 @@
       }
     }
   },
-  "order": ["hero-newsletter", "usp-icons", "lifestyle-grid", "tagline"]
+  "order": [
+    "hero-newsletter",
+    "usp-icons",
+    "lifestyle-grid",
+    "tagline"
+  ]
 }

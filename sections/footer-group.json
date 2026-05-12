@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer group",
@@ -9,48 +18,44 @@
           "type": "item",
           "settings": {
             "icon": "picto-delivery-truck",
-            "title": "Fri fragt fra 499 kr.",
-            "content": "<p>Hurtig levering i Danmark</p>",
             "icon_width": 28,
-            "mobile_icon_width": 24
+            "mobile_icon_width": 24,
+            "title": "Fri fragt fra 499 kr.",
+            "content": "<p>Hurtig levering i Danmark</p>"
           }
         },
         "icon-2": {
           "type": "item",
           "settings": {
             "icon": "picto-return",
-            "title": "30 dages retur",
-            "content": "<p>Nem retur og ombytning</p>",
             "icon_width": 28,
-            "mobile_icon_width": 24
-          }
-        },
-        "icon-3": {
-          "type": "item",
-          "settings": {
-            "custom_icon": "shopify://shop_images/icon-waterproof.png",
-            "title": "Waterproof jewellery",
-            "content": "<p>Smykker du kan beholde på</p>",
-            "icon_width": 36,
-            "mobile_icon_width": 32
+            "mobile_icon_width": 24,
+            "title": "30 dages retur",
+            "content": "<p>Nem retur og ombytning</p>"
           }
         },
         "icon-4": {
           "type": "item",
           "settings": {
             "icon": "picto-customer-support",
-            "title": "Kundeservice",
-            "content": "<p>hello@marea.dk</p>",
             "icon_width": 28,
-            "mobile_icon_width": 24
+            "mobile_icon_width": 24,
+            "title": "Kundeservice",
+            "content": "<p>hello@marea.dk</p>"
           }
         }
       },
-      "block_order": ["icon-1", "icon-2", "icon-3", "icon-4"],
+      "block_order": [
+        "icon-1",
+        "icon-2",
+        "icon-4"
+      ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "stack_on_mobile": false,
+        "icon_color": "",
+        "text_color": "",
         "text_alignment": "center"
       }
     },
@@ -61,7 +66,9 @@
           "type": "newsletter",
           "settings": {
             "title": "Bliv en del af MAREA",
-            "content": "<p>Tilmeld dig og få de første nyheder om launch, nye drops og kampagner.</p>"
+            "content": "<p>Tilmeld dig og få de første nyheder om launch, nye drops og kampagner.</p>",
+            "button_background": "",
+            "button_text_color": ""
           }
         },
         "links-shop": {
@@ -97,7 +104,13 @@
           }
         }
       },
-      "block_order": ["newsletter", "links-shop", "links-service", "links-about", "text-contact"],
+      "block_order": [
+        "newsletter",
+        "links-shop",
+        "links-service",
+        "links-about",
+        "text-contact"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "separate_section_with_border": false,
@@ -111,5 +124,8 @@
       }
     }
   },
-  "order": ["text-with-icons", "footer"]
+  "order": [
+    "text-with-icons",
+    "footer"
+  ]
 }
