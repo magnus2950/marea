@@ -8,7 +8,79 @@
  * ------------------------------------------------------------
  */
 {
-  "current": "Prestige",
+  "current": {
+    "icon_stroke_width": 1,
+    "section_vertical_spacing": "lg",
+    "modal_color_scheme": "scheme-1",
+    "product_rating_color": "#C8A96A",
+    "product_on_sale_accent": "#B5453B",
+    "product_sold_out_badge_background": "#E8D8C2",
+    "product_custom_badge_background": "#22313A",
+    "success_color": "#3F7A4E",
+    "warning_color": "#C8A96A",
+    "error_color": "#B5453B",
+    "heading_font": "playfair_display_n4",
+    "heading_text_transform": "normal",
+    "heading_font_size_factor": 1.1,
+    "heading_letter_spacing": 0,
+    "text_font": "inter_n4",
+    "text_font_size_mobile": 14,
+    "text_font_size_desktop": 15,
+    "text_font_letter_spacing": 0,
+    "button_text_font": "body",
+    "button_letter_spacing": 8,
+    "product_image_aspect_ratio": "portrait",
+    "product_card_text_font": "body",
+    "social_instagram": "https://www.instagram.com/mareajewellerycph/",
+    "social_tiktok": "",
+    "content_for_index": [],
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#f6f2ec",
+          "background_gradient": "",
+          "text_color": "#002e6d",
+          "primary_button_background": "#fffdf9",
+          "primary_button_text_color": "#002e6d",
+          "circle_button_background": "#002e6d",
+          "circle_button_icon": "#fffdf9"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#e8d8c2",
+          "background_gradient": "",
+          "text_color": "#22313a",
+          "primary_button_background": "#22313a",
+          "primary_button_text_color": "#fffdf9",
+          "circle_button_background": "#fffdf9",
+          "circle_button_icon": "#22313a"
+        }
+      },
+      "scheme-3": {
+        "settings": {
+          "background": "#22313a",
+          "background_gradient": "",
+          "text_color": "#fffdf9",
+          "primary_button_background": "#fffdf9",
+          "primary_button_text_color": "#22313a",
+          "circle_button_background": "#fffdf9",
+          "circle_button_icon": "#22313a"
+        }
+      },
+      "scheme-4": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text_color": "#fffdf9",
+          "primary_button_background": "#fffdf9",
+          "primary_button_text_color": "#22313a",
+          "circle_button_background": "#fffdf9",
+          "circle_button_icon": "#22313a"
+        }
+      }
+    }
+  },
   "installed_preset_name": "Prestige",
   "presets": {
     "Prestige": {
