@@ -49,7 +49,7 @@
         "sidebar_menu": "",
         "customer_account_menu": "customer-account-main-menu",
         "menu_open_trigger": "hover",
-        "menu_text_font": "body",
+        "menu_text_font": "heading",
         "enable_search": true,
         "sidebar_color_scheme": "scheme-1",
         "sidebar_text_font": "body",
