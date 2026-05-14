@@ -142,6 +142,10 @@
                 <p class="h1">{{ block.settings.title }}</p>
               {%- endif -%}
 
+              {%- if block.settings.content != blank -%}
+                <div class="slideshow__slide-text">{{ block.settings.content }}</div>
+              {%- endif -%}
+
               {%- if block.settings.button_1_text != blank or block.settings.button_2_text != blank -%}
                 {%- assign button_mobile_position = block.settings.mobile_text_position | split: 'text-' | last -%}
                 {%- assign button_desktop_position = block.settings.desktop_text_position | split: 'text-' | last -%}
@@ -377,6 +381,11 @@
           "id": "subheading",
           "label": "t:global.text.subheading",
           "default": "Tell your story"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Description"
         },
         {
           "type": "inline_richtext",

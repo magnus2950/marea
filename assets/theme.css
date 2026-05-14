@@ -6312,6 +6312,29 @@ shopify-account::part(signed-out-avatar) {
   overflow: hidden;
 }
 
+/* Hero slideshow: match .prose left padding to the brandstory image left edge
+   (= .container margin-start + the 40px padding we set on .image-with-text). */
+.shopify-section--slideshow .slideshow__slide-content .prose {
+  padding-inline-start: calc(max(var(--container-gutter, 1.25rem), 50% - var(--container-lg-max-width, 78.75rem) / 2) + 40px);
+}
+.shopify-section--slideshow .slideshow__slide-content .prose > .h6:first-child {
+  display: inline-block;
+  align-self: flex-start;
+  background: #e8d8c2;
+  color: #042a53;
+  padding: .55rem 1.05rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  letter-spacing: .04em;
+  text-transform: none;
+}
+.shopify-section--slideshow .slideshow__slide-text {
+  max-width: 38ch;
+  line-height: 1.5;
+  margin: 0;
+}
+.shopify-section--slideshow .slideshow__slide-text p { margin: 0; }
+
 /* Header: solid white background so it stands clear from the cream page */
 .shopify-section--header .header {
   background: #ffffff;
@@ -6323,6 +6346,9 @@ shopify-account::part(signed-out-avatar) {
   width: 56px;
   height: auto;
   margin: -2.25rem 0 2.5rem;
+}
+img.section-header__wave.image-with-text__wave {
+  padding-bottom: 30px;
 }
 
 /* Homepage Brandstory image: rounded corners, 20px padding, scaled smaller */
