@@ -44,7 +44,7 @@
       "settings": {
         "allow_transparent_header": false,
         "show_next_section_button": true,
-        "media_size": "xl",
+        "media_size": "lg",
         "show_initial_transition": true,
         "autoplay": false,
         "autoplay_pause_on_video": true,
