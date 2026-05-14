@@ -39,19 +39,10 @@
         "content": "Tilmeld dig og få de første nyheder om launch, nye drops og kampagner. Du deltager samtidig i konkurrencen om valgfrie smykker for 1.000 kr.",
         "button_text": "Skriv mig op"
       }
-    },
-    "privacy-banner": {
-      "type": "privacy-banner",
-      "settings": {
-        "color_scheme": "scheme-3",
-        "title": "Vi bruger cookies",
-        "content": "<p>Vi bruger cookies og lignende teknologier til at give dig den bedste oplevelse på siden. Læs mere i vores <a href=\"/policies/privacy-policy\">privatlivspolitik</a> og <a href=\"/pages/cookiepolitik\">cookiepolitik</a>.</p>"
-      }
     }
   },
   "order": [
     "cart-drawer",
-    "newsletter-popup",
-    "privacy-banner"
+    "newsletter-popup"
   ]
 }

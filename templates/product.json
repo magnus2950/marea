@@ -46,37 +46,42 @@
         "feature-1": {
           "type": "feature_with_icon",
           "settings": {
-            "text": "Vandfast i stainless steel",
+            "text": "Vandfast og svedresistent",
+            "metafield_key": "feature_1",
             "link": "",
             "icon": "none",
-            "custom_icon": "shopify://shop_images/icon-waterproof.png",
+            "custom_icon": "shopify://shop_images/marea-icon-drop-v2.png",
             "icon_width": 24,
-            "background": "#ffffff",
-            "text_color": "#6b6b6b",
+            "background": "",
+            "text_color": "",
             "border_color": ""
           }
         },
         "feature-2": {
           "type": "feature_with_icon",
           "settings": {
-            "text": "Designet i København",
+            "text": "Designet til hverdagens eventyr",
+            "metafield_key": "feature_2",
             "link": "",
-            "icon": "picto-jewelry",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/marea-icon-sun-v2.png",
             "icon_width": 24,
-            "background": "#ffffff",
-            "text_color": "#6b6b6b",
+            "background": "",
+            "text_color": "",
             "border_color": ""
           }
         },
         "feature-3": {
           "type": "feature_with_icon",
           "settings": {
-            "text": "365 dages kvalitetsgaranti",
+            "text": "18K guldbelagt rustfrit stål",
+            "metafield_key": "feature_3",
             "link": "",
-            "icon": "picto-shield",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/marea-icon-wave-v2.png",
             "icon_width": 24,
-            "background": "#ffffff",
-            "text_color": "#6b6b6b",
+            "background": "",
+            "text_color": "",
             "border_color": ""
           }
         },
@@ -104,16 +109,24 @@
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": false,
-            "atc_button_background": "#002e6d",
+            "atc_button_background": "#042a53",
             "atc_button_text_color": "#ffffff",
             "payment_button_background": "#ffffff",
-            "payment_button_text_color": "#002e6d"
+            "payment_button_text_color": "#042a53"
           }
         },
-        "shipping-info": {
-          "type": "more_information",
+        "trust-badges": {
+          "type": "trust_badges_row",
           "settings": {
-            "text": "Fri fragt fra 499 kr · 30 dages retur · Levering 1-3 hverdage"
+            "icon_1": "picto-delivery-truck",
+            "title_1": "Hurtig levering",
+            "subtitle_1": "1–2 hverdage",
+            "icon_2": "picto-gift",
+            "title_2": "Fri fragt over 499 DKK",
+            "subtitle_2": "",
+            "icon_3": "picto-return",
+            "title_3": "Nem retur",
+            "subtitle_3": "30 dages returret"
           }
         },
         "pickup_availability": {
@@ -178,7 +191,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "shipping-info",
+        "trust-badges",
         "pickup_availability",
         "accordion-description",
         "accordion-care",
@@ -216,7 +229,10 @@
         "vertical_spacing_factor": 1,
         "subheading": "",
         "title": "Du vil måske også lide",
-        "content": ""
+        "content": "",
+        "show_view_all_button": true,
+        "view_all_text": "Se hele kollektionen",
+        "view_all_url": "/collections/all"
       }
     }
   },

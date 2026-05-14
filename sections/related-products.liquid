@@ -19,7 +19,7 @@
     <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
       <div class="container">
         <div class="section-stack">
-          {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
+          {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, show_wave_divider: true -%}
 
           {%- capture product_list -%}
             {%- for product in recommendations.products -%}
@@ -58,6 +58,14 @@
                 </button>
               </carousel-next-button>
             </product-list>
+          {%- endif -%}
+
+          {%- if section.settings.show_view_all_button -%}
+            <div class="text-center" style="margin-top:1.5rem;">
+              <a href="{{ section.settings.view_all_url | default: '/collections/all' }}" class="button button--outline">
+                {{ section.settings.view_all_text | default: 'Se hele kollektionen' }}
+              </a>
+            </div>
           {%- endif -%}
         </div>
       </div>
@@ -182,6 +190,27 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
+    },
+    {
+      "type": "header",
+      "content": "View all button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all_button",
+      "label": "Show 'View all' button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "Button text",
+      "default": "Se hele kollektionen"
+    },
+    {
+      "type": "url",
+      "id": "view_all_url",
+      "label": "Button link"
     }
   ],
   "presets": [

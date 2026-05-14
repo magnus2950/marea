@@ -477,7 +477,7 @@ height-observer {
 }
 
 shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
-  --shopify-accelerated-checkout-button-block-size: 44px;
+  --shopify-accelerated-checkout-button-block-size: 34px;
   --shopify-accelerated-checkout-button-border-radius: var(--button-border-radius);
   --shopify-accelerated-checkout-button-box-shadow: none;
 }
@@ -6280,6 +6280,140 @@ shopify-account::part(signed-out-avatar) {
   grid-area: product-gallery;
   display: flex;
   position: relative;
+}
+
+/* Product card: cover-fit image, beige card background with rounded corners */
+.product-card {
+  background: #f5f1ed;
+  border-radius: 6px;
+  padding: .75rem .75rem 1rem;
+  overflow: hidden;
+}
+.product-card__figure { border-radius: 6px; overflow: hidden; }
+.product-card .product-card__image {
+  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* Decorative wave divider under section headings (product/collection lists) */
+.section-header__wave {
+  display: block;
+  width: 56px;
+  height: auto;
+  margin: -1rem auto -1rem;
+  color: currentColor;
+  opacity: .9;
+}
+
+/* Always-visible outline button (e.g. "Se hele kollektionen" under product lists) */
+a.button.button--outline {
+  border: 1px solid currentColor;
+  padding: .65rem 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Price lists: render at full text color (no subdued fade) on cards and product page */
+.product-card .price-list .text-subdued,
+.price-list--product .text-subdued {
+  color: rgb(var(--text-color));
+}
+
+/* Product page price: regular weight, not bold */
+.price-list--product,
+.price-list--product .h4,
+.price-list--product .h5,
+.price-list--product .h6 {
+  font-weight: 400;
+}
+
+/* Buttons: +2px text */
+.button {
+  font-size: calc(var(--text-sm) + 2px);
+}
+
+/* Product page: rounded ATC button */
+.buy-buttons .button,
+.buy-buttons button[type="submit"] {
+  border-radius: 6px;
+}
+
+/* Product page: stack the top "feature_with_icon" badges vertically (Vandfast / Designet / Materiale) */
+.product-info .feature-badge-list {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .75rem;
+  width: 100%;
+}
+.product-info .feature-badge-list .feature-badge {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0;
+  font-size: var(--text-sm);
+  column-gap: .75rem;
+  display: inline-flex;
+  align-items: center;
+}
+.product-info .feature-badge-list .feature-badge :is(svg, img) {
+  width: 34px;
+  height: 34px;
+  max-width: 34px !important;
+}
+
+/* Product page: trust badges row (delivery / shipping / return) */
+.trust-badges-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgb(var(--text-color) / 0.15);
+  border-bottom: 1px solid rgb(var(--text-color) / 0.15);
+}
+.trust-badges-row__item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 0 .25rem;
+  position: relative;
+}
+.trust-badges-row__item + .trust-badges-row__item::before {
+  content: "";
+  position: absolute;
+  inset-block: .25rem;
+  inset-inline-start: calc(-.5rem);
+  width: 1px;
+  background: rgb(var(--text-color) / 0.15);
+}
+.trust-badges-row__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+.trust-badges-row__text { line-height: 1.25; }
+.trust-badges-row__title {
+  font-size: .875rem;
+  font-weight: 500;
+}
+.trust-badges-row__subtitle {
+  font-size: .8125rem;
+  opacity: .7;
+}
+@media screen and (max-width: 699px) {
+  .trust-badges-row { gap: .5rem; }
+  .trust-badges-row__item { flex-direction: column; text-align: center; gap: .4rem; }
+  .trust-badges-row__item + .trust-badges-row__item::before { inset-inline-start: calc(-.25rem); }
+}
+
+/* Rounded corners on all product images (cards + main gallery). */
+.product-card__image,
+.product-gallery__media,
+.product-gallery__media img,
+.product-gallery__carousel img,
+.product-gallery__image-list img {
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 /* Sticky gallery on desktop — stays visible while scrolling product info,

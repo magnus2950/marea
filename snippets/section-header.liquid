@@ -27,6 +27,10 @@
           <h2 class="h2">{{- heading -}}</h2>
         {%- endif -%}
 
+        {%- if show_wave_divider -%}
+          <img src="{{ 'marea-wave-divider.png' | file_url }}" alt="" class="section-header__wave" loading="lazy" width="56" height="18">
+        {%- endif -%}
+
         {{- content -}}
       </div>
     {%- endif -%}

@@ -461,7 +461,17 @@
             -%}
 
           {%- when 'feature_with_icon' -%}
-            {%- if block.settings.text != blank or block.settings.icon != 'none' or block.settings.custom_icon != blank -%}
+            {%- liquid
+              assign feature_text = block.settings.text
+              assign mf_key = block.settings.metafield_key | strip
+              if mf_key != blank
+                assign mf_value = product.metafields.custom[mf_key].value
+                if mf_value != blank
+                  assign feature_text = mf_value
+                endif
+              endif
+            -%}
+            {%- if feature_text != blank or block.settings.icon != 'none' or block.settings.custom_icon != blank -%}
               {%- capture feature_content -%}
                 {%- if block.settings.custom_icon != blank -%}
                   {%- capture sizes -%}{{ block.settings.icon_width }}px{%- endcapture -%}
@@ -472,8 +482,8 @@
                   {%- render 'icon' with block.settings.icon, width: block.settings.icon_width -%}
                 {%- endif -%}
 
-                {%- if block.settings.text != blank -%}
-                  <p>{{ block.settings.text }}</p>
+                {%- if feature_text != blank -%}
+                  <p>{{ feature_text }}</p>
                 {%- endif -%}
               {%- endcapture -%}
 
@@ -557,6 +567,27 @@
                 {%- render 'icon' with 'chevron-right' -%}
               </a>
             {%- endif -%}
+
+          {%- when 'trust_badges_row' -%}
+            <div class="trust-badges-row">
+              {%- for i in (1..3) -%}
+                {%- assign ikey = 'icon_' | append: i -%}
+                {%- assign tkey = 'title_' | append: i -%}
+                {%- assign skey = 'subtitle_' | append: i -%}
+                {%- assign icon_name = block.settings[ikey] -%}
+                {%- assign t = block.settings[tkey] -%}
+                {%- assign s = block.settings[skey] -%}
+                <div class="trust-badges-row__item">
+                  {%- if icon_name != blank and icon_name != 'none' -%}
+                    {%- render 'icon' with icon_name, class: 'trust-badges-row__icon' -%}
+                  {%- endif -%}
+                  <div class="trust-badges-row__text">
+                    {%- if t != blank -%}<div class="trust-badges-row__title">{{ t }}</div>{%- endif -%}
+                    {%- if s != blank -%}<div class="trust-badges-row__subtitle">{{ s }}</div>{%- endif -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
         {%- endcase -%}
       {%- endcapture -%}
 

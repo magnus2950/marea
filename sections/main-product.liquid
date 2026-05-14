@@ -986,6 +986,12 @@
           "default": "Feature"
         },
         {
+          "type": "text",
+          "id": "metafield_key",
+          "label": "Metafield key (optional)",
+          "info": "If set, reads product.metafields.custom.<key> and uses it instead of the text above. E.g. feature_1"
+        },
+        {
           "type": "url",
           "id": "link",
           "label": "t:global.text.link"
@@ -1042,6 +1048,21 @@
             {
               "value": "picto-star",
               "label": "t:global.icons.star",
+              "group": "t:global.icons.shop_category"
+            },
+            {
+              "value": "picto-drop",
+              "label": "Drop",
+              "group": "t:global.icons.shop_category"
+            },
+            {
+              "value": "picto-sun",
+              "label": "Sun",
+              "group": "t:global.icons.shop_category"
+            },
+            {
+              "value": "picto-wave",
+              "label": "Wave",
               "group": "t:global.icons.shop_category"
             },
             {
@@ -1391,6 +1412,21 @@
             {
               "value": "picto-star",
               "label": "t:global.icons.star",
+              "group": "t:global.icons.shop_category"
+            },
+            {
+              "value": "picto-drop",
+              "label": "Drop",
+              "group": "t:global.icons.shop_category"
+            },
+            {
+              "value": "picto-sun",
+              "label": "Sun",
+              "group": "t:global.icons.shop_category"
+            },
+            {
+              "value": "picto-wave",
+              "label": "Wave",
               "group": "t:global.icons.shop_category"
             },
             {
@@ -1876,6 +1912,72 @@
           "label": "t:sections.main_product.blocks.more_information.text",
           "default": "More information"
         }
+      ]
+    },
+    {
+      "type": "trust_badges_row",
+      "name": "Trust badges row",
+      "limit": 1,
+      "settings": [
+        { "type": "header", "content": "Column 1" },
+        { "type": "select", "id": "icon_1", "label": "Icon",
+          "options": [
+            { "value": "picto-delivery-truck", "label": "Delivery truck" },
+            { "value": "picto-box", "label": "Box" },
+            { "value": "picto-plane", "label": "Plane" },
+            { "value": "picto-pin", "label": "Pin" },
+            { "value": "picto-gift", "label": "Gift" },
+            { "value": "picto-return", "label": "Return" },
+            { "value": "picto-shield", "label": "Shield" },
+            { "value": "picto-lock", "label": "Lock" },
+            { "value": "picto-credit-card", "label": "Credit card" },
+            { "value": "picto-star", "label": "Star" },
+            { "value": "picto-love", "label": "Love" },
+            { "value": "picto-percent", "label": "Percent" }
+          ],
+          "default": "picto-delivery-truck" },
+        { "type": "text", "id": "title_1", "label": "Title", "default": "Hurtig levering" },
+        { "type": "text", "id": "subtitle_1", "label": "Subtitle", "default": "1–2 hverdage" },
+
+        { "type": "header", "content": "Column 2" },
+        { "type": "select", "id": "icon_2", "label": "Icon",
+          "options": [
+            { "value": "picto-delivery-truck", "label": "Delivery truck" },
+            { "value": "picto-box", "label": "Box" },
+            { "value": "picto-plane", "label": "Plane" },
+            { "value": "picto-pin", "label": "Pin" },
+            { "value": "picto-gift", "label": "Gift" },
+            { "value": "picto-return", "label": "Return" },
+            { "value": "picto-shield", "label": "Shield" },
+            { "value": "picto-lock", "label": "Lock" },
+            { "value": "picto-credit-card", "label": "Credit card" },
+            { "value": "picto-star", "label": "Star" },
+            { "value": "picto-love", "label": "Love" },
+            { "value": "picto-percent", "label": "Percent" }
+          ],
+          "default": "picto-gift" },
+        { "type": "text", "id": "title_2", "label": "Title", "default": "Fri fragt over 499 DKK" },
+        { "type": "text", "id": "subtitle_2", "label": "Subtitle" },
+
+        { "type": "header", "content": "Column 3" },
+        { "type": "select", "id": "icon_3", "label": "Icon",
+          "options": [
+            { "value": "picto-delivery-truck", "label": "Delivery truck" },
+            { "value": "picto-box", "label": "Box" },
+            { "value": "picto-plane", "label": "Plane" },
+            { "value": "picto-pin", "label": "Pin" },
+            { "value": "picto-gift", "label": "Gift" },
+            { "value": "picto-return", "label": "Return" },
+            { "value": "picto-shield", "label": "Shield" },
+            { "value": "picto-lock", "label": "Lock" },
+            { "value": "picto-credit-card", "label": "Credit card" },
+            { "value": "picto-star", "label": "Star" },
+            { "value": "picto-love", "label": "Love" },
+            { "value": "picto-percent", "label": "Percent" }
+          ],
+          "default": "picto-return" },
+        { "type": "text", "id": "title_3", "label": "Title", "default": "Nem retur" },
+        { "type": "text", "id": "subtitle_3", "label": "Subtitle", "default": "30 dages returret" }
       ]
     }
   ]

@@ -15,7 +15,7 @@
     "product_rating_color": "#C8A96A",
     "product_on_sale_accent": "#B5453B",
     "product_sold_out_badge_background": "#E8D8C2",
-    "product_custom_badge_background": "#002e6d",
+    "product_custom_badge_background": "#042a53",
     "success_color": "#3F7A4E",
     "warning_color": "#C8A96A",
     "error_color": "#B5453B",
@@ -28,9 +28,11 @@
     "text_font_size_desktop": 18,
     "text_font_letter_spacing": 0,
     "button_text_font": "body",
+    "button_text_transform": "normal",
     "button_letter_spacing": 8,
     "currency_code_enabled": true,
     "round_color_swatches": false,
+    "product_color_display": "hide",
     "product_image_aspect_ratio": "portrait",
     "show_vendor": false,
     "product_card_text_font": "body",
@@ -42,10 +44,10 @@
         "settings": {
           "background": "#fffdf9",
           "background_gradient": "",
-          "text_color": "#002e6d",
+          "text_color": "#042a53",
           "primary_button_background": "#fffdf9",
-          "primary_button_text_color": "#002e6d",
-          "circle_button_background": "#002e6d",
+          "primary_button_text_color": "#042a53",
+          "circle_button_background": "#042a53",
           "circle_button_icon": "#fffdf9"
         }
       },
@@ -62,13 +64,13 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#002e6d",
+          "background": "#042a53",
           "background_gradient": "",
           "text_color": "#fffdf9",
           "primary_button_background": "#fffdf9",
-          "primary_button_text_color": "#002e6d",
+          "primary_button_text_color": "#042a53",
           "circle_button_background": "#fffdf9",
-          "circle_button_icon": "#002e6d"
+          "circle_button_icon": "#042a53"
         }
       },
       "scheme-4": {
