@@ -58,6 +58,7 @@
             {%- when 'heading' -%}
               {%- if block.settings.text != blank -%}
                 <p class="{{ block.settings.heading_tag }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+                <img src="{{ 'marea-wave-divider.png' | file_url }}" alt="" class="section-header__wave image-with-text__wave" width="56" height="18" loading="lazy">
               {%- endif -%}
 
             {%- when 'richtext' -%}

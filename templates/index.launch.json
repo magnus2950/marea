@@ -56,16 +56,10 @@
     "brand-story": {
       "type": "image-with-text",
       "blocks": {
-        "subheading-1": {
-          "type": "subheading",
-          "settings": {
-            "text": "Brandstory"
-          }
-        },
         "heading-1": {
           "type": "heading",
           "settings": {
-            "text": "Smykker du kan beholde på.",
+            "text": "Brandstory",
             "heading_tag": "h2"
           }
         },
@@ -84,7 +78,6 @@
         }
       },
       "block_order": [
-        "subheading-1",
         "heading-1",
         "richtext-1",
         "link-1"
@@ -149,8 +142,8 @@
         "content_alignment": "center",
         "text_alignment": "center",
         "spacing": "md",
-        "subheading": "Launchkampagne",
-        "title": "Tre veje ind i MAREA"
+        "subheading": "",
+        "title": "Launchkampagne"
       }
     },
     "launch-products": {
@@ -178,7 +171,8 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "SS26"
+        "subheading": "",
+        "title": "Udvalgt til launch"
       }
     },
     "usp-strip": {
@@ -187,49 +181,38 @@
         "icon-1": {
           "type": "item",
           "settings": {
-            "custom_icon": "shopify://shop_images/icon-waterproof.png",
+            "custom_icon": "shopify://shop_images/marea-icon-drop-v2.png",
             "icon_width": 36,
             "mobile_icon_width": 32,
-            "title": "Vandfast",
-            "content": "<p>Designet til vand, sved og saltvand</p>"
+            "title": "WATERPROOF",
+            "content": ""
           }
         },
         "icon-2": {
           "type": "item",
           "settings": {
-            "custom_icon": "shopify://shop_images/icon-everyday.png",
+            "custom_icon": "shopify://shop_images/marea-icon-sun-v2.png",
             "icon_width": 36,
             "mobile_icon_width": 32,
-            "title": "Designet til hverdagen",
-            "content": "<p>Smykker du kan have på hele dagen</p>"
+            "title": "EVERYDAY",
+            "content": ""
           }
         },
         "icon-3": {
           "type": "item",
           "settings": {
-            "icon": "picto-jewelry",
-            "icon_width": 32,
-            "mobile_icon_width": 28,
-            "title": "Clean Copenhagen design",
-            "content": "<p>Stainless steel i minimalistisk udtryk</p>"
-          }
-        },
-        "icon-4": {
-          "type": "item",
-          "settings": {
-            "custom_icon": "shopify://shop_images/icon-sport-sea.png",
+            "custom_icon": "shopify://shop_images/marea-icon-wave-v2.png",
             "icon_width": 36,
             "mobile_icon_width": 32,
-            "title": "Perfekt til rejser og sport",
-            "content": "<p>Letvægtsdesign der følger dig overalt</p>"
+            "title": "SPORT & SEA",
+            "content": ""
           }
         }
       },
       "block_order": [
         "icon-1",
         "icon-2",
-        "icon-3",
-        "icon-4"
+        "icon-3"
       ],
       "settings": {
         "color_scheme": "scheme-2",
@@ -245,8 +228,8 @@
         "separate_section_with_border": false,
         "image_size": "md",
         "image": "shopify://shop_images/marea-newsletter-bg.jpg",
-        "subheading": "Bliv en del af MAREA",
-        "title": "Hør om nye drops først",
+        "subheading": "",
+        "title": "Bliv en del af launch",
         "content": "<p>Tilmeld dig nyhedsbrevet og få early access til SS26, nyheder og inspiration.</p>",
         "button_text": "Tilmeld",
         "overlay_color": "#22313A",

@@ -43,8 +43,10 @@
                 {%- endfor -%}
               </carousel-navigation>
             {%- elsif section.settings.hide_collection_title != true -%}
-              <h2 class="h2">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
+              <h2 class="h2">{{ section.settings.title | default: section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
             {%- endif -%}
+
+            <img src="{{ 'marea-wave-divider.png' | file_url }}" alt="" class="section-header__wave" width="56" height="18" loading="lazy">
           </div>
         {%- endunless -%}
 
@@ -104,7 +106,7 @@
                 {%- assign button_link = block.settings.link_url | default: block.settings.collection.url | default: '#' -%}
 
                 <div class="justify-self-center">
-                  {%- render 'button', href: button_link, content: block.settings.link_text -%}
+                  {%- render 'button', href: button_link, content: block.settings.link_text, style: 'outline' -%}
                 </div>
               {%- endif -%}
             </div>
@@ -213,6 +215,11 @@
       "id": "subheading",
       "label": "t:global.text.subheading",
       "default": "Featured collection"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Section title (overrides collection title)"
     },
     {
       "type": "checkbox",

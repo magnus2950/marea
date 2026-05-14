@@ -6304,11 +6304,87 @@ shopify-account::part(signed-out-avatar) {
 }
 
 /* Product page only: cream card background on related products */
-.shopify-section--related-products .product-card {
+.shopify-section--related-products .product-card,
+.shopify-section--featured-collections .product-card {
   background: #f5f1ed;
   border-radius: 6px;
   padding: .75rem .75rem 1rem;
   overflow: hidden;
+}
+
+/* Header: solid white background so it stands clear from the cream page */
+.shopify-section--header .header {
+  background: #ffffff;
+}
+
+/* Brand story heading wave divider: align left like the surrounding text */
+.image-with-text__wave {
+  display: block;
+  width: 56px;
+  height: auto;
+  margin: -2.25rem 0 2.5rem;
+}
+
+/* Homepage Brandstory image: rounded corners, 20px padding, scaled smaller */
+.shopify-section--image-with-text .image-with-text img,
+.shopify-section--image-with-text picture {
+  border-radius: 6px;
+  overflow: hidden;
+}
+.shopify-section--image-with-text .image-with-text {
+  gap: 3rem;
+  padding: 40px;
+}
+@media screen and (min-width: 1000px) {
+  .shopify-section--image-with-text .image-with-text > picture {
+    max-width: 1000px;
+    width: 1000px;
+    height: 640px;
+    overflow: hidden;
+    display: block;
+  }
+  .shopify-section--image-with-text .image-with-text > picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Homepage Launchkampagne: cream card around each multi-column item */
+.shopify-section--multi-column .multi-column__item {
+  background: #f5f1ed;
+  border-radius: 6px;
+  padding: 1rem 1rem 1.25rem;
+  overflow: hidden;
+}
+.shopify-section--multi-column .multi-column__media {
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.shopify-section--multi-column .multi-column__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Featured-collections (homepage) view-all button: same hover style as related products */
+.shopify-section--featured-collections a.button.button--outline,
+.shopify-section--featured-collections .button--outline a,
+.shopify-section--featured-collections a[class*="link"] {
+  background: #fffdf9;
+  border: 1px solid #042a53;
+  color: #042a53;
+  padding: .65rem 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color .2s ease, color .2s ease;
+}
+.shopify-section--featured-collections a.button.button--outline:hover,
+.shopify-section--featured-collections .button--outline a:hover {
+  background: #042a53;
+  color: #ffffff;
 }
 
 /* Decorative wave divider under section headings (product/collection lists) */
