@@ -6282,6 +6282,16 @@ shopify-account::part(signed-out-avatar) {
   position: relative;
 }
 
+/* Sticky gallery on desktop — stays visible while scrolling product info,
+   releases naturally once the info column ends. */
+@media screen and (min-width: 1000px) {
+  .product-gallery {
+    position: sticky;
+    top: calc(var(--header-height, 0px) + 1rem);
+    align-self: start;
+  }
+}
+
 .product-gallery__zoom-button {
   z-index: 1;
   transition: opacity .2s, visibility .2s;
