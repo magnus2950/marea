@@ -6282,6 +6282,19 @@ shopify-account::part(signed-out-avatar) {
   position: relative;
 }
 
+/* Footer trust strip: vertical dividers between text-with-icons items */
+@media screen and (min-width: 700px) {
+  .text-with-icons__item { position: relative; }
+  .text-with-icons__item + .text-with-icons__item::before {
+    content: "";
+    position: absolute;
+    inset-block: 1rem;
+    inset-inline-start: 0;
+    width: 1px;
+    background: rgb(var(--text-color) / .15);
+  }
+}
+
 /* All product cards: enforce uniform image format (portrait, cover) */
 .product-card__figure { aspect-ratio: 4 / 5; overflow: hidden; border-radius: 6px; }
 .product-card .product-card__image {
@@ -6309,12 +6322,19 @@ shopify-account::part(signed-out-avatar) {
 }
 
 /* Always-visible outline button (e.g. "Se hele kollektionen" under product lists) */
-a.button.button--outline {
-  border: 1px solid currentColor;
+.shopify-section--related-products a.button.button--outline {
+  background: #ffffff;
+  border: 1px solid #042a53;
+  color: #042a53;
   padding: .65rem 1.5rem;
   display: inline-block;
   text-decoration: none;
   border-radius: 6px;
+  transition: background-color .2s ease, color .2s ease;
+}
+.shopify-section--related-products a.button.button--outline:hover {
+  background: #042a53;
+  color: #ffffff;
 }
 
 /* Price lists: render at full text color (no subdued fade) on cards and product page */
