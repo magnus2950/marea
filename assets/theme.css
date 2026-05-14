@@ -6338,8 +6338,8 @@ shopify-account::part(signed-out-avatar) {
 @media screen and (min-width: 1000px) {
   .shopify-section--image-with-text .image-with-text > picture {
     max-width: 1000px;
-    width: 1000px;
-    height: 640px;
+    width: 100%;
+    aspect-ratio: 25 / 16;
     overflow: hidden;
     display: block;
   }
