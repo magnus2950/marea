@@ -6282,15 +6282,15 @@ shopify-account::part(signed-out-avatar) {
   position: relative;
 }
 
-/* Product card: cover-fit image, beige card background with rounded corners */
-.product-card {
+/* Product page only: card background + cover-fit on related products */
+.shopify-section--related-products .product-card {
   background: #f5f1ed;
   border-radius: 6px;
   padding: .75rem .75rem 1rem;
   overflow: hidden;
 }
-.product-card__figure { border-radius: 6px; overflow: hidden; }
-.product-card .product-card__image {
+.shopify-section--related-products .product-card__figure { border-radius: 6px; overflow: hidden; }
+.shopify-section--related-products .product-card .product-card__image {
   object-fit: cover !important;
   width: 100%;
   height: 100%;
