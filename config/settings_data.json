@@ -32,12 +32,13 @@
     "button_letter_spacing": 8,
     "currency_code_enabled": true,
     "round_color_swatches": false,
-    "product_color_display": "hide",
     "product_image_aspect_ratio": "portrait",
     "show_vendor": false,
     "product_card_text_font": "body",
+    "product_color_display": "hide",
     "social_instagram": "https://www.instagram.com/mareajewellerycph/",
     "social_tiktok": "",
+    "favicon": "shopify://shop_images/marea-wave-divider.png",
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
