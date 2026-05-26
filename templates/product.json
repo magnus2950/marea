@@ -89,6 +89,22 @@
           "type": "separator",
           "settings": {}
         },
+        "linked_color_selector_XhYAQK": {
+          "type": "linked_color_selector",
+          "settings": {
+            "label": "Vælg model",
+            "tile_size": 120,
+            "tile_size_mobile": 96,
+            "gap": 12,
+            "border_radius": 0,
+            "tile_background": "#f3f3f3",
+            "border_color": "#e5e5e5",
+            "border_color_hover": "#cfcfcf",
+            "border_color_active": "#000000",
+            "border_width": 1,
+            "border_width_active": 1
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -188,6 +204,7 @@
         "feature-2",
         "feature-3",
         "separator-2",
+        "linked_color_selector_XhYAQK",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
