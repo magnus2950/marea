@@ -213,6 +213,11 @@
               {%- endif -%}
             {%- endif -%}
 
+          {%- when 'linked_color_selector' -%}
+            {%- if product != blank -%}
+              {%- render 'linked-color-selector', product: product, block: block -%}
+            {%- endif -%}
+
           {%- when 'variant_picker' -%}
             {%- if product != blank -%}
               {%- render 'variant-picker',

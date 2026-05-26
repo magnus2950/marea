@@ -1,0 +1,223 @@
+{%- comment -%}
+  ----------------------------------------------------------------------------------------------------------------------
+  LINKED COLOR SELECTOR
+  ----------------------------------------------------------------------------------------------------------------------
+
+  Linker produkter sammen som en variant-vælger via produkt-metafelt.
+
+  Kilde:
+    product.metafields.custom.linked_farver  (List of products)
+    product.metafields.custom.color_name     (single line text — valgfri, ellers tages sidste del af titlen efter " - ")
+
+  Parametre:
+    product : produktet der renderes for
+    block   : section-block med settings (label, tile_size, gap, border, farver osv.)
+{%- endcomment -%}
+
+{%- liquid
+  assign linked = product.metafields.custom.linked_farver.value
+  assign current_color = product.metafields.custom.color_name | default: product.title | split: ' - ' | last
+  assign current_color_title = current_color | downcase | capitalize
+
+  assign label = block.settings.label | default: 'Vælg model'
+  assign tile_size = block.settings.tile_size | default: 120
+  assign tile_size_mobile = block.settings.tile_size_mobile | default: 96
+  assign gap = block.settings.gap | default: 12
+  assign border_radius = block.settings.border_radius | default: 0
+  assign border_width = block.settings.border_width | default: 1
+  assign border_width_active = block.settings.border_width_active | default: 1
+  assign tile_background = block.settings.tile_background | default: '#f3f3f3'
+  assign border_color = block.settings.border_color | default: '#e5e5e5'
+  assign border_color_hover = block.settings.border_color_hover | default: '#cfcfcf'
+  assign border_color_active = block.settings.border_color_active | default: '#000000'
+
+  assign uid = block.id | default: product.id
+-%}
+
+{%- comment -%} Byg sortérbar liste "color_key|||index" {%- endcomment -%}
+{%- assign entries = '' -%}
+{%- if linked and linked != blank -%}
+  {%- assign tmp = '' -%}
+  {%- for lp in linked -%}
+    {%- assign lp_color = lp.metafields.custom.color_name | default: lp.title | split: ' - ' | last -%}
+    {%- assign color_key = lp_color | downcase | strip -%}
+    {%- if forloop.first -%}
+      {%- assign tmp = color_key | append: '|||' | append: forloop.index0 -%}
+    {%- else -%}
+      {%- assign tmp = tmp | append: ':::' | append: color_key | append: '|||' | append: forloop.index0 -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign entries = tmp | split: ':::' | sort -%}
+{%- endif -%}
+
+{%- if linked == blank or linked.size == 0 -%}
+  {%- comment -%} no linked products – render nothing {%- endcomment -%}
+{%- else -%}
+  <div
+    class="linked-color-selector"
+    data-linked-color-selector
+    style="
+      --lcs-tile-size: {{ tile_size }}px;
+      --lcs-tile-size-mobile: {{ tile_size_mobile }}px;
+      --lcs-gap: {{ gap }}px;
+      --lcs-radius: {{ border_radius }}px;
+      --lcs-border-width: {{ border_width }}px;
+      --lcs-border-width-active: {{ border_width_active }}px;
+      --lcs-bg: {{ tile_background }};
+      --lcs-border: {{ border_color }};
+      --lcs-border-hover: {{ border_color_hover }};
+      --lcs-border-active: {{ border_color_active }};
+    "
+  >
+    <p class="linked-color-selector__heading">
+      <span class="text-subdued">{{ label | escape }}:</span>
+      <span data-current-color>{{ current_color_title }}</span>
+    </p>
+
+    <ul class="linked-color-selector__list" role="list">
+      {%- comment -%} 1) Aktuelt produkt altid først {%- endcomment -%}
+      {%- assign current_thumb = '' -%}
+      {%- if product.featured_media -%}
+        {%- assign current_thumb = product.featured_media | image_url: width: 360 -%}
+      {%- endif -%}
+
+      <li class="linked-color-selector__item">
+        <a
+          class="linked-color-selector__swatch is-active"
+          href="{{ product.url }}{% if product.selected_or_first_available_variant %}?variant={{ product.selected_or_first_available_variant.id }}{% endif %}"
+          aria-current="true"
+          data-color-label="{{ current_color_title | escape }}"
+          aria-label="{{ current_color_title | escape }}"
+          title="{{ current_color_title | escape }}"
+        >
+          <span class="linked-color-selector__tile" aria-hidden="true">
+            {%- if current_thumb != blank -%}
+              <img class="linked-color-selector__thumb" src="{{ current_thumb }}" width="120" height="120" alt="" loading="lazy">
+            {%- else -%}
+              <span class="linked-color-selector__placeholder"></span>
+            {%- endif -%}
+          </span>
+        </a>
+      </li>
+
+      {%- comment -%} 2) Øvrige varianter alfabetisk {%- endcomment -%}
+      {%- if entries != blank -%}
+        {%- for entry in entries -%}
+          {%- assign parts = entry | split: '|||' -%}
+          {%- assign wanted_index = parts[1] | plus: 0 -%}
+
+          {%- assign lp = blank -%}
+          {%- for p in linked -%}
+            {%- if forloop.index0 == wanted_index -%}
+              {%- assign lp = p -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if lp and lp.id != product.id -%}
+            {%- assign lp_color = lp.metafields.custom.color_name | default: lp.title | split: ' - ' | last -%}
+            {%- assign lp_color_title = lp_color | downcase | capitalize -%}
+            {%- assign thumb_url = '' -%}
+            {%- if lp.featured_media -%}
+              {%- assign thumb_url = lp.featured_media | image_url: width: 360 -%}
+            {%- endif -%}
+
+            <li class="linked-color-selector__item">
+              <a
+                class="linked-color-selector__swatch"
+                href="{{ lp.url }}{% if lp.selected_or_first_available_variant %}?variant={{ lp.selected_or_first_available_variant.id }}{% endif %}"
+                aria-current="false"
+                data-color-label="{{ lp_color_title | escape }}"
+                aria-label="{{ lp_color_title | escape }}"
+                title="{{ lp_color_title | escape }}"
+              >
+                <span class="linked-color-selector__tile" aria-hidden="true">
+                  {%- if thumb_url != blank -%}
+                    <img class="linked-color-selector__thumb" src="{{ thumb_url }}" width="120" height="120" alt="" loading="lazy">
+                  {%- else -%}
+                    <span class="linked-color-selector__placeholder"></span>
+                  {%- endif -%}
+                </span>
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+  </div>
+
+  {%- comment -%} Style only once per page (CSS uses block-scoped CSS vars) {%- endcomment -%}
+  {%- unless linked_color_selector_styles_rendered -%}
+    {%- assign linked_color_selector_styles_rendered = true -%}
+    <style>
+      .linked-color-selector { margin: 0; }
+      .linked-color-selector__heading{
+        display:flex; flex-wrap:wrap; align-items:baseline; gap:.35rem;
+        margin:0 0 .75rem;
+        font-family: var(--text-font-family);
+        font-size: var(--text-sm, 14px);
+        letter-spacing: var(--text-letter-spacing, 0);
+      }
+      .linked-color-selector__list{
+        display:flex; flex-wrap:wrap;
+        gap: var(--lcs-gap);
+        padding:0; margin:0; list-style:none;
+      }
+      .linked-color-selector__item{ flex:0 0 auto; }
+      .linked-color-selector__swatch{
+        display:inline-flex; text-decoration:none; outline:none;
+      }
+      .linked-color-selector__tile{
+        display:inline-flex; align-items:center; justify-content:center;
+        width: var(--lcs-tile-size);
+        height: var(--lcs-tile-size);
+        background: var(--lcs-bg);
+        border: var(--lcs-border-width) solid var(--lcs-border);
+        border-radius: var(--lcs-radius);
+        overflow:hidden;
+        transition: border-color .15s ease, box-shadow .15s ease;
+      }
+      .linked-color-selector__swatch:is(:hover,:focus-visible) .linked-color-selector__tile{
+        border-color: var(--lcs-border-hover);
+      }
+      .linked-color-selector__swatch.is-active .linked-color-selector__tile{
+        border-color: var(--lcs-border-active);
+        border-width: var(--lcs-border-width-active);
+      }
+      .linked-color-selector__thumb{
+        width:100%; height:100%; object-fit:contain; background:transparent;
+      }
+      .linked-color-selector__placeholder{
+        width:70%; height:70%; background:rgb(var(--border-color) / .25); display:block;
+      }
+      @media (max-width: 680px){
+        .linked-color-selector__tile{
+          width: var(--lcs-tile-size-mobile);
+          height: var(--lcs-tile-size-mobile);
+        }
+      }
+    </style>
+  {%- endunless -%}
+
+  <script>
+    (function () {
+      const root = document.querySelector('[data-linked-color-selector][data-uid="{{ uid }}"]') ||
+                   document.querySelector('[data-linked-color-selector]');
+      if (!root) return;
+      const currentEl = root.querySelector('[data-current-color]');
+      if (!currentEl) return;
+
+      const originalText = currentEl.textContent;
+      const setTemp = (t) => (currentEl.textContent = t);
+      const reset = () => (currentEl.textContent = originalText);
+
+      root.querySelectorAll('.linked-color-selector__swatch').forEach((a) => {
+        const label = a.getAttribute('data-color-label') || '';
+        a.addEventListener('mouseenter', () => setTemp(label));
+        a.addEventListener('mouseleave', reset);
+        a.addEventListener('focus', () => setTemp(label));
+        a.addEventListener('blur', reset);
+      });
+    })();
+  </script>
+{%- endif -%}
