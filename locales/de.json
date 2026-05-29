@@ -108,7 +108,7 @@
       "view_in_space": "In deinem Bereich ansehen",
       "taxes_included": "inkl. MwSt.",
       "taxes_excluded": "zzgl. MwSt.",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Versandkosten<\/a> werden an der Kasse berechnet",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Versandkosten</a> werden an der Kasse berechnet",
       "size_chart": "Größentabelle",
       "available_colors_count": {
         "one": "{{ count }} Farbe verfügbar",
@@ -178,7 +178,8 @@
     },
     "products_count": {
       "one": "{{ count }} Produkt",
-      "other": "{{ count }} Produkte"
+      "other": "{{ count }} Produkte",
+      "zero": "0 Produkte"
     },
     "faceting": {
       "filters": "Filter",
@@ -226,7 +227,8 @@
       "comment_published": "Dein Kommentar wurde veröffentlicht.",
       "count": {
         "one": "{{ count }} Kommentar",
-        "other": "{{ count }} Kommentare"
+        "other": "{{ count }} Kommentare",
+        "zero": "{{ count }} Kommentare"
       }
     }
   },
@@ -419,11 +421,13 @@
     },
     "results_count": {
       "one": "{{ count }} Treffer",
-      "other": "{{ count }} Treffer"
+      "other": "{{ count }} Treffer",
+      "zero": "0 Ergebnisse"
     },
     "results_count_for_terms": {
       "one": "{{ count }} Treffer für \"{{ terms }}\"",
-      "other": "{{ count }} Treffer für \"{{ terms }}\""
+      "other": "{{ count }} Treffer für \"{{ terms }}\"",
+      "zero": "0 Ergebnisse für \"{{ terms }}\""
     }
   },
   "gift_card": {
