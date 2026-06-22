@@ -88,7 +88,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": true,
-        "image": "shopify://shop_images/marea-brandstory.jpg",
+        "image": "shopify://shop_images/65_sommer_selfie_ved_stranden_shopify.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
@@ -101,7 +101,7 @@
         "column-1": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/marea-lifestyle-sport.jpg",
+            "image": "shopify://shop_images/73_sommerstemning_ved_poolkanten_shopify.jpg",
             "title": "No Need To Take It Off",
             "heading_tag": "h4",
             "content": "<p>Hovedbudskabet bag launch — fra workout til weekend.</p>",
@@ -112,7 +112,7 @@
         "column-2": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/marea-product-flatlay.jpg",
+            "image": "shopify://shop_images/74_sommertoej_med_smykker_og_detaljer_shopify.jpg",
             "title": "The Everyday Stack",
             "heading_tag": "h4",
             "content": "<p>Fokus på styling, sæt og smykker du bruger igen og igen.</p>",
@@ -123,7 +123,7 @@
         "column-3": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/marea-lifestyle-waterside.jpg",
+            "image": "shopify://shop_images/58_solrige_strandhaand_med_smykker_shopify.jpg",
             "title": "Made For Summer Skin",
             "heading_tag": "h4",
             "content": "<p>Wet look, glow og sommerstemning til strande, vand og solskinsdage.</p>",
