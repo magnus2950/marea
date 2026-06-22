@@ -16,6 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/MAREA_HERO_Vandfast_22._jun._2026_12.02.54.png",
+            "mobile_image": "shopify://shop_images/HERO_mobile_image_Image_22._jun._2026_12.16.14.png",
             "subheading": "SS26 Launch",
             "content": "<p>Vandfaste smykker designet til bad, sport, strand og hverdag. </p>",
             "title": "Smykker du kan beholde på.",
