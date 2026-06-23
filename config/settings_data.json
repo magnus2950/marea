@@ -32,7 +32,7 @@
     "button_letter_spacing": 8,
     "currency_code_enabled": true,
     "round_color_swatches": false,
-    "product_image_aspect_ratio": "portrait",
+    "product_image_aspect_ratio": "square",
     "show_vendor": false,
     "product_card_text_font": "body",
     "product_color_display": "hide",
