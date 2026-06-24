@@ -8634,20 +8634,23 @@ ul {
 
 /* Quick-add "Føj til indkøbskurv" – samme styling som cart-drawer checkout-knappen:
    solid blå, beige tekst, låste farver + subtil hover-vækst */
-.hpc-cart-button {
+.hpc-cart-button,
+.product-sticky-bar .buy-buttons .button {
   --button-background: 4 42 83;
   --button-outline-color: 4 42 83;
   --button-text-color: 255 253 249;
   transition: transform .2s ease;
 }
-.hpc-cart-button:hover {
+.hpc-cart-button:hover,
+.product-sticky-bar .buy-buttons .button:hover {
   color: rgb(var(--button-text-color));
   border-color: rgb(var(--button-outline-color));
   background-size: 101% 101%, 0 101%;
   background-position: var(--initial-background-position);
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .hpc-cart-button:hover {
+  .hpc-cart-button:hover,
+  .product-sticky-bar .buy-buttons .button:hover {
     transform: scale(1.04);
   }
 }
