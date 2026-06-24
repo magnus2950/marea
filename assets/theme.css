@@ -8641,6 +8641,9 @@ ul {
   --button-text-color: 255 253 249;
   transition: transform .2s ease;
 }
+.product-sticky-bar .buy-buttons .button {
+  border-radius: 0;
+}
 .hpc-cart-button:hover,
 .product-sticky-bar .buy-buttons .button:hover {
   color: rgb(var(--button-text-color));
