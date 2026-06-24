@@ -154,6 +154,30 @@
   {%- endif -%}
 </cart-drawer>
 
+{% style %}
+  #cart-drawer button[name='checkout'] {
+    --button-background: 4 42 83;
+    --button-outline-color: 4 42 83;
+    --button-text-color: 255 253 249;
+    transition: transform .2s ease;
+  }
+
+  /* Lås farverne fast på hover – ingen farveskift som standardknapperne */
+  #cart-drawer button[name='checkout']:hover {
+    color: rgb(var(--button-text-color));
+    border-color: rgb(var(--button-outline-color));
+    background-size: 101% 101%, 0 101%;
+    background-position: var(--initial-background-position);
+  }
+
+  /* Lad knappen vokse en lille smule ved hover */
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    #cart-drawer button[name='checkout']:hover {
+      transform: scale(1.04);
+    }
+  }
+{% endstyle %}
+
 {% schema %}
 {
   "name": "t:sections.cart_drawer.name",
