@@ -61,8 +61,8 @@
           {%- endif -%}
 
           {%- if section.settings.show_view_all_button -%}
-            <div class="text-center" style="margin-top:1.5rem;">
-              <a href="{{ section.settings.view_all_url | default: '/collections/all' }}" class="button button--outline">
+            <div class="text-center cta-reverse" style="margin-top:1.5rem;">
+              <a href="{{ section.settings.view_all_url | default: '/collections/all' }}" class="button">
                 {{ section.settings.view_all_text | default: 'Se hele kollektionen' }}
               </a>
             </div>
@@ -72,6 +72,15 @@
     </div>
   {%- endif -%}
 </product-recommendations>
+
+{% style %}
+  /* Omvendt CTA: solid blå med hvid tekst i hvile, outline-look ved hover */
+  .cta-reverse .button {
+    --button-background: 4 42 83;
+    --button-outline-color: 4 42 83;
+    --button-text-color: 255 253 249;
+  }
+{% endstyle %}
 
 {% schema %}
 {
