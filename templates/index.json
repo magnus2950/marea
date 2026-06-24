@@ -102,10 +102,10 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/73_sommerstemning_ved_poolkanten_shopify.jpg",
-            "title": "No Need To Take It Off",
+            "title": "Waterproof poolside styles",
             "heading_tag": "h4",
-            "content": "<p>Hovedbudskabet bag launch — fra workout til weekend.</p>",
-            "link_url": "shopify://collections/ss26-launch",
+            "content": "<p>Stylish fra workout til weekend</p>",
+            "link_url": "shopify://collections/waterproof-poolside-styles",
             "link_text": "Shop campaign"
           }
         },
@@ -147,7 +147,7 @@
         "text_alignment": "center",
         "spacing": "md",
         "subheading": "",
-        "title": "Launchkampagne",
+        "title": "Launchkampagner",
         "content": ""
       }
     },
