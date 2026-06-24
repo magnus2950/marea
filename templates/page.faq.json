@@ -14,29 +14,32 @@
       "blocks": {
         "category": {
           "type": "category",
+          "disabled": true,
           "settings": {
-            "title": "Order"
+            "title": "Order",
+            "icon": "none",
+            "icon_width": 16
           }
         },
         "question-1": {
           "type": "question",
           "settings": {
-            "question": "Do you ship overseas?",
-            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "question": "Sender I til udlandet?",
+            "answer": "<p>Ja, vi sender til hele Europa. Der tilkommer fragtomkostninger, som bliver lagt til ved checkout.</p>"
           }
         },
         "question-2": {
           "type": "question",
           "settings": {
-            "question": "How long will it take to get my orders?",
-            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "question": "Hvor lang tid tager det at få min ordre?",
+            "answer": "<p>Det afhænger af, hvor du befinder dig. Ordrer, der skal leveres i Danmark, tager 1-3 dage. Leveringer til udlandet kan tage alt fra 3-7 dage.</p>"
           }
         },
         "question-3": {
           "type": "question",
           "settings": {
-            "question": "Any question?",
-            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "question": "Har du andre spørgsmål?",
+            "answer": "<p>Du er velkommen til at kontakte os via vores mail: info@marea.dk – vi står klar til at hjælpe dig.</p>"
           }
         }
       },
@@ -46,7 +49,14 @@
         "question-2",
         "question-3"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "show_categories": false,
+        "subheading": "Har du brug for hjælp?",
+        "title": "Ofte stillede spørgsmål",
+        "content": ""
+      }
     }
   },
   "order": [
