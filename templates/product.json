@@ -155,7 +155,7 @@
             "show_below_gallery": false,
             "icon": "none",
             "title": "Beskrivelse",
-            "content": "<p>Et tidløst smykke designet til at blive på dig — fra morgenkaffe til strand og hverdag. Lavet i højkvalitets stainless steel der ikke ruster, anløber eller mister sin glans.</p><p>Style det alene eller som del af din everyday stack.</p>",
+            "content": "{{ product.description }}",
             "liquid": "",
             "page": ""
           }
