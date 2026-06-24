@@ -43,7 +43,7 @@
         "reduce_padding": true,
         "logo": "shopify://shop_images/MAREA_logo_dark_blue.png",
         "logo_max_width": 300,
-        "logo_mobile_max_width": 120,
+        "logo_mobile_max_width": 160,
         "menu": "main-menu",
         "secondary_menu": "secondary-menu",
         "sidebar_menu": "",
