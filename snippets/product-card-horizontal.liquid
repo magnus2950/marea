@@ -39,8 +39,8 @@
             <input type="hidden" name="quantity" value="1">
             <input type="hidden" name="on_success" value="force_open_drawer">
 
-            <button type="submit" class="@narrow:horizontal-product-card__button link">{{ 'product.general.add_to_cart_button' | t }}</button>
-            <button type="submit" class="@large:horizontal-product-card__button button button--outline button--subdued">{{ 'product.general.add_to_cart_button' | t }}</button>
+            <button type="submit" class="@narrow:horizontal-product-card__button button hpc-cart-button">{{ 'product.general.add_to_cart_button' | t }}</button>
+            <button type="submit" class="@large:horizontal-product-card__button button hpc-cart-button">{{ 'product.general.add_to_cart_button' | t }}</button>
           {%- endform -%}
         </product-form>
       {%- else -%}
@@ -56,8 +56,8 @@
           LOADING
         </quick-buy-modal>
 
-        <button aria-controls="{{ modal_id }}" class="@narrow:horizontal-product-card__button link">{{ 'product.general.add_to_cart_button' | t }}</button>
-        <button aria-controls="{{ modal_id }}" class="@large:horizontal-product-card__button button button--outline button--subdued">
+        <button aria-controls="{{ modal_id }}" class="@narrow:horizontal-product-card__button button hpc-cart-button">{{ 'product.general.add_to_cart_button' | t }}</button>
+        <button aria-controls="{{ modal_id }}" class="@large:horizontal-product-card__button button hpc-cart-button">
           {{ 'product.general.add_to_cart_button' | t }}
         </button>
       {%- endif -%}
