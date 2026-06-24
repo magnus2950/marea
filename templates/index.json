@@ -102,7 +102,7 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/73_sommerstemning_ved_poolkanten_shopify.jpg",
-            "title": "Waterproof poolside styles",
+            "title": "Poolside jewellery",
             "heading_tag": "h4",
             "content": "<p>Stylish fra workout til weekend</p>",
             "link_url": "shopify://collections/waterproof-poolside-styles",
@@ -127,7 +127,7 @@
             "title": "Made For Summer Skin",
             "heading_tag": "h4",
             "content": "<p>Wet look, glow og sommerstemning til strande, vand og solskinsdage.</p>",
-            "link_url": "shopify://collections/all",
+            "link_url": "shopify://collections/made-for-summer-skin",
             "link_text": "Udforsk"
           }
         }
