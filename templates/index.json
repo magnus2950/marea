@@ -157,10 +157,10 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "ss26-launch",
+            "collection": "armband",
             "products_count": 8,
             "title": "",
-            "link_url": "shopify://collections/all",
+            "link_url": "shopify://collections/armband",
             "link_text": "Se hele kollektionen"
           }
         }
