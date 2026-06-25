@@ -45,6 +45,8 @@
         "logo_max_width": 300,
         "logo_mobile_max_width": 160,
         "menu": "main-menu",
+        "mini_mega_menu_items": "Kollektioner",
+        "mini_mega_menu_threshold": 6,
         "secondary_menu": "secondary-menu",
         "sidebar_menu": "",
         "customer_account_menu": "customer-account-main-menu",

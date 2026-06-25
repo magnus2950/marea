@@ -5318,6 +5318,20 @@ shopify-account::part(signed-out-avatar) {
   overflow-y: auto;
 }
 
+/* Mini-mega menu: del en lang undermenu op i 2 lækre kolonner */
+.header__dropdown-menu--columns {
+  width: auto;
+  min-width: 24rem;
+  max-width: 34rem;
+  column-count: 2;
+  column-gap: 1rem;
+  padding-inline: .9375rem;
+}
+
+.header__dropdown-menu--columns > li {
+  break-inside: avoid;
+}
+
 .header__dropdown-menu .header__dropdown-menu {
   border-width: 1px;
   inset-block-start: calc(-1.125rem - 1px);

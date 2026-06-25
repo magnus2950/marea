@@ -505,6 +505,23 @@
       "name": "t:sections.main_product.blocks.separator.name"
     },
     {
+      "type": "linked_color_selector",
+      "name": "Linked color selector",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Vælg model" },
+        { "type": "range", "id": "tile_size", "min": 60, "max": 200, "step": 4, "unit": "px", "label": "Tile size (desktop)", "default": 120 },
+        { "type": "range", "id": "tile_size_mobile", "min": 48, "max": 160, "step": 4, "unit": "px", "label": "Tile size (mobile)", "default": 96 },
+        { "type": "range", "id": "gap", "min": 0, "max": 40, "step": 2, "unit": "px", "label": "Gap", "default": 12 },
+        { "type": "range", "id": "border_radius", "min": 0, "max": 40, "step": 1, "unit": "px", "label": "Border radius", "default": 0 },
+        { "type": "range", "id": "border_width", "min": 0, "max": 6, "step": 1, "unit": "px", "label": "Border width", "default": 1 },
+        { "type": "range", "id": "border_width_active", "min": 0, "max": 6, "step": 1, "unit": "px", "label": "Border width (active)", "default": 1 },
+        { "type": "color", "id": "tile_background", "label": "Tile background", "default": "#f3f3f3" },
+        { "type": "color", "id": "border_color", "label": "Border color", "default": "#e5e5e5" },
+        { "type": "color", "id": "border_color_hover", "label": "Border color (hover)", "default": "#cfcfcf" },
+        { "type": "color", "id": "border_color_active", "label": "Border color (active)", "default": "#000000" }
+      ]
+    },
+    {
       "type": "description",
       "name": "t:sections.main_product.blocks.description.name",
       "limit": 1,

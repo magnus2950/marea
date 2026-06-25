@@ -136,6 +136,18 @@
                     break
                   endif
                 endfor
+
+                assign is_mini_mega = false
+                if section.settings.mini_mega_menu_items != blank
+                  assign mini_mega_list = section.settings.mini_mega_menu_items | downcase | split: ','
+                  for item in mini_mega_list
+                    assign item_clean = item | strip
+                    if item_clean == link_title_downcase and link.links.size >= section.settings.mini_mega_menu_threshold
+                      assign is_mini_mega = true
+                      break
+                    endif
+                  endfor
+                endif
               %}
 
               <li class="header__primary-nav-item">
@@ -160,7 +172,7 @@
                       {%- if mega_menu_block != '' -%}
                         {%- render 'mega-menu', link: link, block: mega_menu_block -%}
                       {%- else -%}
-                        <ul class="header__dropdown-menu {% if link.levels <= 1 %}header__dropdown-menu--restrictable{% endif %} unstyled-list" role="list">
+                        <ul class="header__dropdown-menu {% if link.levels <= 1 %}header__dropdown-menu--restrictable{% endif %} {% if is_mini_mega %}header__dropdown-menu--columns{% endif %} unstyled-list" role="list">
                           {%- for sub_link in link.links -%}
                             <li>
                               {%- if sub_link.levels == 0 -%}
@@ -427,6 +439,22 @@
       "id": "menu",
       "label": "t:sections.header.menu",
       "default": "main-menu"
+    },
+    {
+      "type": "text",
+      "id": "mini_mega_menu_items",
+      "label": "Mini-mega menuer (2 kolonner)",
+      "info": "Kommasepareret liste over menupunkter hvis undermenu skal vises i 2 kolonner. Fx: Kollektioner, Smykker"
+    },
+    {
+      "type": "range",
+      "id": "mini_mega_menu_threshold",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": "Min. antal punkter før 2 kolonner",
+      "info": "Sæt til 0 for altid 2 kolonner på de valgte menuer.",
+      "default": 6
     },
     {
       "type": "link_list",
