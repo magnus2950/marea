@@ -102,9 +102,9 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/73_sommerstemning_ved_poolkanten_shopify.jpg",
-            "title": "Poolside jewellery",
+            "title": "Poolside Jewellery",
             "heading_tag": "h4",
-            "content": "<p>Stylish fra workout til weekend</p>",
+            "content": "<p>Stylish fra workout til weekend. Smykker du kan beholde på.</p>",
             "link_url": "shopify://collections/waterproof-poolside-styles",
             "link_text": "Shop campaign"
           }
@@ -124,9 +124,9 @@
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/58_solrige_strandhaand_med_smykker_shopify.jpg",
-            "title": "Made For Summer Skin",
+            "title": "Made for Summer Skin",
             "heading_tag": "h4",
-            "content": "<p>Wet look, glow og sommerstemning til strande, vand og solskinsdage.</p>",
+            "content": "<p>Wet look, glow og sommerstemning til strande og solskinsdage.</p>",
             "link_url": "shopify://collections/made-for-summer-skin",
             "link_text": "Udforsk"
           }
