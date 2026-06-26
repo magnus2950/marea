@@ -69,13 +69,13 @@
         "richtext-1": {
           "type": "richtext",
           "settings": {
-            "content": "<p>MAREA er skabt til den unge kvinde, der ønsker smykker med et clean og enkelt design. Vores smykke er skabt til at du kan beholde dem på hele dagen - fra en tur i fitness, poolen til hverdagen,  uden kompromis.</p><p>MAREAs smykker handler om frihed, lethed og smykker, du ikke behøver tage af.</p>"
+            "content": "<p><strong>Smykker, du kan beholde på.</strong><br/><br/>Skabt til dig, der elsker et enkelt og lækkert udtryk, men nægter at lade dig begrænse i hverdagen. Hop i poolen, tag i fitness og lev livet med dine yndlingssmykker.</p>"
           }
         },
         "link-1": {
           "type": "link",
           "settings": {
-            "text": "Læs mere om MAREA",
+            "text": "Mød MAREA",
             "url": "shopify://pages/om-marea"
           }
         }
