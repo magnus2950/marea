@@ -29,7 +29,21 @@
       </dialog-close-button>
 
       <div class="v-stack gap-8">
-        {%- if section.settings.title != blank or section.settings.content != blank -%}
+        {%- if posted_successfully -%}
+          {%- if section.settings.success_title != blank or section.settings.success_content != blank -%}
+            <div class="v-stack gap-4 text-center">
+              {%- if section.settings.success_title != blank -%}
+                <p class="h4">{{ section.settings.success_title }}</p>
+              {%- endif -%}
+
+              {%- if section.settings.success_content != blank -%}
+                <div class="prose">
+                  {{ section.settings.success_content }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- elsif section.settings.title != blank or section.settings.content != blank -%}
           <div class="v-stack gap-4 text-center">
             {%- if section.settings.title != blank -%}
               <p class="h4">{{ section.settings.title }}</p>
@@ -46,8 +60,10 @@
         {%- if section.settings.show_newsletter_form -%}
           {%- form 'customer', id: newsletter_id, class: 'form' -%}
             {%- if form.posted_successfully? -%}
-              {%- capture success_message -%}{{ 'general.newsletter.subscribed_successfully' | t }}{%- endcapture -%}
-              {%- render 'banner', content: success_message, status: 'success', text_alignment: 'center' -%}
+              {%- if section.settings.success_title == blank and section.settings.success_content == blank -%}
+                {%- capture success_message -%}{{ 'general.newsletter.subscribed_successfully' | t }}{%- endcapture -%}
+                {%- render 'banner', content: success_message, status: 'success', text_alignment: 'center' -%}
+              {%- endif -%}
 
               <script>
                 localStorage.setItem('theme:popup-filled', 'true');
@@ -140,6 +156,22 @@
       "id": "button_text",
       "label": "t:global.text.button_text",
       "default": "Subscribe"
+    },
+    {
+      "type": "header",
+      "content": "Takke-side (efter tilmelding)"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "success_title",
+      "label": "Takke-overskrift",
+      "default": "Tak for din tilmelding!"
+    },
+    {
+      "type": "richtext",
+      "id": "success_content",
+      "label": "Takke-tekst",
+      "default": "<p>Du er nu tilmeldt vores nyhedsbrev. Hold øje med din indbakke.</p>"
     }
   ]
 }
