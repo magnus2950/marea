@@ -1,0 +1,156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": true,
+        "page_width": "lg"
+      }
+    },
+    "image_with_text_jen8qd": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_DNLVL9": {
+          "type": "subheading",
+          "settings": {
+            "text": "Om Marea"
+          }
+        },
+        "heading_HqLTEJ": {
+          "type": "heading",
+          "settings": {
+            "text": "Velkommen til MAREA – Smykker skabt til at beholde på",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_Qykeh8": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Vi tror på, at dine smykker skal understrege din personlighed, ikke begrænse din hverdag. MAREA er skabt til den unge, moderne kvinde, der ønsker et enkelt og stilsikkert udtryk, men som nægter at gå på kompromis med sin frihed.</p><p></p><p><strong>En trend med et formål<br/></strong>Idéen bag MAREA startede, da vi så en tydelig trend: Kvinder efterspurgte i stigende grad smykker, som de kunne beholde på<em>uanset hvad</em>. Hverdagen bevæger sig hurtigt, og man har ikke behøver tage ringe og armbånd af og på. Med den trend mener vi, at to kvaliteter er fundamentet for MAREA: Et helt clean design og en uovertruffen, lang holdbarhed.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_DNLVL9",
+        "heading_HqLTEJ",
+        "richtext_Qykeh8"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Billede_27.05.2026_10.54.49.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "image_with_text_RCKdjA": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_MEAT8X": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Om Marea"
+          }
+        },
+        "heading_XeVXW8": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Vandfaste designs til hele døgnet</strong> ",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_6TRwmY": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Vores kollektioner er skabt til at følge dig overalt. Uanset om dagen byder på svedige timer i fitnesscenteret, en spontan tur i poolen eller en lang dag på farten, skal dine smykker kunne klare det hele. MAREAs smykker er vandfaste, så du trygt kan beholde dem på i badet, på stranden og under træningen. Slut med anløbne overflader og bekymringer – og goddag til smykker, der bliver en fast del af dig.</p><p></p><p><strong>Vores filosofi</strong> MAREA handler om at gøre det ubesværet at se godt ud. For os betyder det:</p><ul><li><strong>Clean design:</strong> Tidløse, minimalistiske og enkle former, der passer til alt i din garderobe.</li><li><strong>Lang holdbarhed:</strong> Kvalitetsmaterialer, der holder glansen og tåler vand, sved og hverdagens slid.</li><li><strong>Total frihed:</strong> Smykker, du kan leve livet spontant i – uden overhovedet at skænke dem en tanke.</li></ul><p>Dyk ned i vores univers, og find dine nye favoritter. Velkommen til MAREA – smykker skabt til at beholde på.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_MEAT8X",
+        "heading_XeVXW8",
+        "richtext_6TRwmY"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/Billede_27.05.2026_16.53.33.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
+    "178247514153354179": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_1b13711_HyT4Rh": {
+          "type": "ai_gen_block_1b13711",
+          "settings": {
+            "desktop_width_percent": 100,
+            "gap": 20,
+            "border_radius": 0,
+            "overlay_padding": 20,
+            "title_size": 20,
+            "description_size": 14,
+            "title_1": "",
+            "description_1": "",
+            "link_1": "",
+            "title_2": "",
+            "description_2": "",
+            "link_2": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_1b13711_HyT4Rh"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "newsletter_Q9QeyG": {
+      "type": "newsletter",
+      "name": "t:sections.newsletter.presets.newsletter.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image_size": "auto",
+        "subheading": "",
+        "title": "Skriv dig op til vores community her",
+        "content": "",
+        "button_text": "Tilmeld",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_jen8qd",
+    "image_with_text_RCKdjA",
+    "178247514153354179",
+    "newsletter_Q9QeyG"
+  ]
+}
