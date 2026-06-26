@@ -1,6 +1,307 @@
+{% doc %}
+  @prompt
+    Indsæt 2 billedefelter, som passer godt ind i siden, hvor jeg kan vise nogle af vores smykker
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-jewelry-showcase-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-jewelry-showcase__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-jewelry-showcase__item-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-jewelry-showcase__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
+
+  .ai-jewelry-showcase__image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-jewelry-showcase__placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8D8C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-jewelry-showcase__placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-jewelry-showcase__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(4, 42, 83, 0.7), transparent);
+    padding: {{ block.settings.overlay_padding }}px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-jewelry-showcase__item-{{ ai_gen_id }}:hover .ai-jewelry-showcase__overlay-{{ ai_gen_id }} {
+    opacity: 1;
+  }
+
+  .ai-jewelry-showcase__title-{{ ai_gen_id }} {
+    color: #FFFDF9;
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .ai-jewelry-showcase__description-{{ ai_gen_id }} {
+    color: #FFFDF9;
+    font-size: {{ block.settings.description_size }}px;
+    margin: 8px 0 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-jewelry-showcase__container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.gap | times: 0.75 }}px;
+    }
+
+    .ai-jewelry-showcase__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.85 }}px;
+    }
+
+    .ai-jewelry-showcase__description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.85 }}px;
+    }
+  }
+{% endstyle %}
+
+<jewelry-showcase-{{ ai_gen_id }}
+  class="ai-jewelry-showcase-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-jewelry-showcase__container-{{ ai_gen_id }}">
+    {% for i in (1..2) %}
+      {% liquid
+        assign image_key = 'image_' | append: i
+        assign title_key = 'title_' | append: i
+        assign description_key = 'description_' | append: i
+        assign link_key = 'link_' | append: i
+
+        assign image = block.settings[image_key]
+        assign title = block.settings[title_key]
+        assign description = block.settings[description_key]
+        assign link = block.settings[link_key]
+      %}
+
+      <div class="ai-jewelry-showcase__item-{{ ai_gen_id }}">
+        {% if link != blank %}
+          <a href="{{ link }}">
+        {% endif %}
+
+        <div class="ai-jewelry-showcase__image-wrapper-{{ ai_gen_id }}">
+          {% if image %}
+            <img
+              src="{{ image | image_url: width: 800 }}"
+              alt="{{ image.alt | escape }}"
+              loading="lazy"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              class="ai-jewelry-showcase__image-{{ ai_gen_id }}"
+            >
+          {% else %}
+            <div class="ai-jewelry-showcase__placeholder-{{ ai_gen_id }}">
+              {{ 'product-apparel-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+
+          {% if title != blank or description != blank %}
+            <div class="ai-jewelry-showcase__overlay-{{ ai_gen_id }}">
+              {% if title != blank %}
+                <h3 class="ai-jewelry-showcase__title-{{ ai_gen_id }}">{{ title }}</h3>
+              {% endif %}
+              {% if description != blank %}
+                <div class="ai-jewelry-showcase__description-{{ ai_gen_id }}">{{ description }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if link != blank %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</jewelry-showcase-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class JewelryShowcase{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.style.display = 'block';
+      }
+    }
+
+    customElements.define('jewelry-showcase-{{ ai_gen_id }}', JewelryShowcase{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Smykke showcase",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Space between images",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Overlay style"
+    },
+    {
+      "type": "range",
+      "id": "overlay_padding",
+      "label": "Overlay padding",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Billede 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Billede"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Titel"
+    },
+    {
+      "type": "textarea",
+      "id": "description_1",
+      "label": "Beskrivelse"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Billede 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Billede"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Titel"
+    },
+    {
+      "type": "textarea",
+      "id": "description_2",
+      "label": "Beskrivelse"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Smykke showcase"
+    }
+  ]
+}
 {% endschema %}
