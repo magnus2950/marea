@@ -29,7 +29,7 @@
     "newsletter-popup": {
       "type": "newsletter-popup",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "apparition_delay": 6,
         "show_only_on_index": true,
         "hide_for_account_holders": true,
