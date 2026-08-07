@@ -63,7 +63,7 @@
           "type": "collection",
           "settings": {
             "collection": "nyheder",
-            "products_count": 4,
+            "products_count": 8,
             "title": "New Arrivals",
             "link_url": "",
             "link_text": "View all"
