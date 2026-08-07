@@ -85,7 +85,7 @@
         "vertical_spacing_factor": 1,
         "subheading": "",
         "title": "New Arrivals",
-        "hide_collection_title": false
+        "hide_collection_title": true
       }
     },
     "brand-story": {
