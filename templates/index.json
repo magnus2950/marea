@@ -83,8 +83,8 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "",
-        "title": "New Arrivals",
+        "subheading": "New Arrivals",
+        "title": "",
         "hide_collection_title": true
       }
     },
@@ -284,8 +284,8 @@
   "order": [
     "hero-slideshow",
     "featured_collections_C6pnNk",
-    "brand-story",
     "launch-campaigns",
+    "brand-story",
     "launch-products",
     "usp-strip",
     "newsletter-cta"
