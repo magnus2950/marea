@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/marea-hero-desktop-1a.jpg",
             "mobile_image": "shopify://shop_images/marea-hero-mobil-1d.jpg",
             "subheading": "",
-            "content": "<p>Vandfaste smykker designet til bad, sport, strand og hverdag. </p>",
+            "content": "<p><strong>Vandfaste smykker designet til bad, sport, strand og hverdag. </strong></p>",
             "title": "Smykker du kan beholde på.",
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -88,45 +88,6 @@
         "hide_collection_title": true
       }
     },
-    "brand-story": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading-1": {
-          "type": "heading",
-          "settings": {
-            "text": "Brandstory",
-            "heading_tag": "h2"
-          }
-        },
-        "richtext-1": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p><strong>Smykker, du kan beholde på.</strong><br/><br/>Skabt til dig, der elsker et enkelt og lækkert udtryk, men nægter at lade dig begrænse i hverdagen. Hop i poolen, tag i fitness og lev livet med dine yndlingssmykker.</p>"
-          }
-        },
-        "link-1": {
-          "type": "link",
-          "settings": {
-            "text": "Mød MAREA",
-            "url": "shopify://pages/om-marea"
-          }
-        }
-      },
-      "block_order": [
-        "heading-1",
-        "richtext-1",
-        "link-1"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "image": "shopify://shop_images/65_sommer_selfie_ved_stranden_shopify.jpg",
-        "reveal_on_scroll": true,
-        "image_position": "start",
-        "content_width": "sm",
-        "remove_vertical_spacing": true
-      }
-    },
     "launch-campaigns": {
       "type": "multi-column",
       "blocks": {
@@ -181,6 +142,45 @@
         "subheading": "",
         "title": "Sommerens kampagner",
         "content": ""
+      }
+    },
+    "brand-story": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Brandstory",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><strong>Smykker, du kan beholde på.</strong><br/><br/>Skabt til dig, der elsker et enkelt og lækkert udtryk, men nægter at lade dig begrænse i hverdagen. Hop i poolen, tag i fitness og lev livet med dine yndlingssmykker.</p>"
+          }
+        },
+        "link-1": {
+          "type": "link",
+          "settings": {
+            "text": "Mød MAREA",
+            "url": "shopify://pages/om-marea"
+          }
+        }
+      },
+      "block_order": [
+        "heading-1",
+        "richtext-1",
+        "link-1"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/65_sommer_selfie_ved_stranden_shopify.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
       }
     },
     "launch-products": {
