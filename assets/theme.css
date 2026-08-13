@@ -6331,6 +6331,24 @@ shopify-account::part(signed-out-avatar) {
 .shopify-section--slideshow .slideshow__slide-content .prose {
   padding-inline-start: calc(max(var(--container-gutter, 1.25rem), 50% - var(--container-lg-max-width, 78.75rem) / 2) + 40px);
 }
+
+/* Når hero-indholdet er centreret: nulstil den venstre-forskydning så teksten
+   centreres i selve skærmen (ikke inde i en højreskubbet boks) */
+.shopify-section--slideshow .slideshow__slide-content.text-center .prose {
+  padding-inline: var(--container-gutter, 1.25rem);
+}
+@media screen and (min-width: 700px) {
+  .shopify-section--slideshow .slideshow__slide-content.sm\:text-center .prose {
+    padding-inline: var(--container-gutter, 1.25rem);
+  }
+}
+.shopify-section--slideshow .slideshow__slide-content.text-center .prose > .h6:first-child {
+  align-self: center;
+}
+/* Centrér også den smalle beskrivelses-blok (max-width 38ch) */
+.shopify-section--slideshow .slideshow__slide-content.text-center .slideshow__slide-text {
+  margin-inline: auto;
+}
 .shopify-section--slideshow .slideshow__slide-content .prose > .h6:first-child {
   display: inline-block;
   align-self: flex-start;
