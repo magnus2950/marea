@@ -20,7 +20,7 @@
             "subheading": "",
             "content": "<p><strong>Vandfaste smykker designet til bad, sport, strand og hverdag. </strong></p>",
             "title": "<strong>Smykker du kan beholde på.</strong>",
-            "mobile_text_position": "place-self-center-start text-start",
+            "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "content_max_width": 1200,
             "button_1_text": "Udforsk her",
