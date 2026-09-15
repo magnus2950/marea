@@ -18,6 +18,10 @@
       text-transform: uppercase;
       margin-bottom: 6px;
     }
+    #shopify-section-{{ section.id }} .marea-ig__wave {
+      display: block;
+      margin: 10px auto 0;
+    }
     #shopify-section-{{ section.id }} .marea-ig__handle {
       text-decoration: none;
     }
@@ -59,6 +63,9 @@
           {%- else -%}
             <span class="heading h5">{{ section.settings.handle_text }}</span>
           {%- endif -%}
+        {%- endif -%}
+        {%- if section.settings.show_wave_divider -%}
+          <img src="{{ 'marea-wave-divider.png' | file_url }}" alt="" class="section-header__wave marea-ig__wave" loading="lazy" width="56" height="18">
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -103,6 +110,7 @@
     { "type": "text", "id": "label", "label": "Label", "default": "Følg os på Instagram" },
     { "type": "text", "id": "handle_text", "label": "Handle-tekst", "default": "@mareajewellerycph" },
     { "type": "url", "id": "handle_link", "label": "Handle-link" },
+    { "type": "checkbox", "id": "show_wave_divider", "label": "Vis bølge-divider", "default": true },
     { "type": "range", "id": "image_size", "label": "Billedstørrelse (desktop)", "min": 160, "max": 400, "step": 10, "unit": "px", "default": 260 },
     { "type": "range", "id": "image_gap", "label": "Afstand mellem billeder", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 16 },
     { "type": "range", "id": "scrolling_speed", "label": "Hastighed", "min": 0.1, "max": 2, "step": 0.1, "default": 0.3 },
