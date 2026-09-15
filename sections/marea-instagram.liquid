@@ -1,0 +1,136 @@
+{%- comment -%}
+  MAREA · INSTAGRAM-MARQUEE
+  Rullende række af manuelt valgte billeder med label og klikbart @handle.
+  Porteret fra Pure by Nat-temaet; bygget på Prestiges <marquee-text>.
+{%- endcomment -%}
+
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} .marea-ig__header {
+      text-align: center;
+      margin-bottom: 28px;
+      padding: 0 24px;
+    }
+    #shopify-section-{{ section.id }} .marea-ig__label {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    #shopify-section-{{ section.id }} .marea-ig__handle {
+      text-decoration: none;
+    }
+    #shopify-section-{{ section.id }} .marea-ig__handle:hover {
+      text-decoration: underline;
+    }
+    #shopify-section-{{ section.id }} .marea-ig__image {
+      width: {{ section.settings.image_size }}px;
+      height: {{ section.settings.image_size }}px;
+      flex-shrink: 0;
+      display: block;
+    }
+    #shopify-section-{{ section.id }} .marea-ig__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .marea-ig__image {
+        width: {{ section.settings.image_size | times: 0.65 | round }}px;
+        height: {{ section.settings.image_size | times: 0.65 | round }}px;
+      }
+    }
+  </style>
+
+  <div
+    class="section-spacing color-scheme {% if section.settings.separate_section_with_border %}bordered-section{% endif %}"
+    style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}"
+  >
+    {%- if section.settings.label != blank or section.settings.handle_text != blank -%}
+      <div class="marea-ig__header">
+        {%- if section.settings.label != blank -%}
+          <span class="marea-ig__label">{{ section.settings.label }}</span>
+        {%- endif -%}
+        {%- if section.settings.handle_text != blank -%}
+          {%- if section.settings.handle_link != blank -%}
+            <a class="marea-ig__handle heading h5" href="{{ section.settings.handle_link }}" target="_blank" rel="noopener">{{ section.settings.handle_text }}</a>
+          {%- else -%}
+            <span class="heading h5">{{ section.settings.handle_text }}</span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <marquee-text
+      speed="{{ section.settings.scrolling_speed }}"
+      direction="rtl"
+      {% if section.settings.pause_on_hover %}pause-on-hover{% endif %}
+      class="scrolling-content"
+      style="--scrolling-content-content-gap: {{ section.settings.image_gap }}px;"
+    >
+      <div class="scrolling-content__item">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.image != blank -%}
+            {%- if block.settings.link != blank -%}
+              <a class="marea-ig__image" href="{{ block.settings.link }}" target="_blank" rel="noopener" {{ block.shopify_attributes }}>
+                {{- block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '300,450,600,800' -}}
+              </a>
+            {%- else -%}
+              <div class="marea-ig__image" {{ block.shopify_attributes }}>
+                {{- block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '300,450,600,800' -}}
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </marquee-text>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Marea · Instagram",
+  "class": "shopify-section--marea-instagram",
+  "tag": "section",
+  "max_blocks": 12,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    { "type": "checkbox", "id": "separate_section_with_border", "label": "Adskil sektion med kant", "default": false },
+    { "type": "text", "id": "label", "label": "Label", "default": "Følg os på Instagram" },
+    { "type": "text", "id": "handle_text", "label": "Handle-tekst", "default": "@mareajewellerycph" },
+    { "type": "url", "id": "handle_link", "label": "Handle-link" },
+    { "type": "range", "id": "image_size", "label": "Billedstørrelse (desktop)", "min": 160, "max": 400, "step": 10, "unit": "px", "default": 260 },
+    { "type": "range", "id": "image_gap", "label": "Afstand mellem billeder", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 16 },
+    { "type": "range", "id": "scrolling_speed", "label": "Hastighed", "min": 0.1, "max": 2, "step": 0.1, "default": 0.3 },
+    { "type": "checkbox", "id": "pause_on_hover", "label": "Pause ved hover", "default": true },
+    { "type": "color", "id": "background", "label": "Baggrund" },
+    { "type": "color", "id": "text_color", "label": "Tekstfarve" }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Billede",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Billede" },
+        { "type": "url", "id": "link", "label": "Link (fx Instagram-opslag)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marea · Instagram",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

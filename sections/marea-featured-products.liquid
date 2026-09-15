@@ -1,0 +1,182 @@
+{%- comment -%}
+  MAREA · UDVALGTE PRODUKTER
+  Håndplukkede produkter i grid, hvor hvert produktbillede kan erstattes
+  af et miljøbillede. Porteret fra Pure by Nat-temaets Bestsellers-sektion.
+{%- endcomment -%}
+
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} .marea-fp__header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 0 24px;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__subheading {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__grid {
+      display: grid;
+      grid-template-columns: repeat({{ section.settings.products_per_row_mobile }}, minmax(0, 1fr));
+      gap: 24px 16px;
+      padding: 0 max(24px, 3vw);
+    }
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} .marea-fp__grid {
+        grid-template-columns: repeat({{ section.settings.products_per_row_desktop }}, minmax(0, 1fr));
+        gap: 40px 24px;
+      }
+    }
+    #shopify-section-{{ section.id }} .marea-fp__card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__media {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: {{ section.settings.image_ratio }};
+      margin-bottom: 12px;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.35s ease;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__media img.marea-fp__media--hover {
+      opacity: 0;
+    }
+    @media (hover: hover) {
+      #shopify-section-{{ section.id }} .marea-fp__card:hover .marea-fp__media--hover {
+        opacity: 1;
+      }
+    }
+    #shopify-section-{{ section.id }} .marea-fp__title {
+      display: block;
+      margin-bottom: 4px;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__price {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+
+  <div
+    class="section-spacing color-scheme {% if section.settings.separate_section_with_border %}bordered-section{% endif %}"
+    style="{% render 'surface', background: section.settings.background, text_color: section.settings.text_color %}"
+  >
+    {%- if section.settings.subheading != blank or section.settings.title != blank -%}
+      <div class="marea-fp__header">
+        {%- if section.settings.subheading != blank -%}
+          <span class="marea-fp__subheading">{{ section.settings.subheading }}</span>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="heading h3">{{ section.settings.title }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="marea-fp__grid">
+      {%- for block in section.blocks -%}
+        {%- assign product = block.settings.product -%}
+        {%- if product != blank -%}
+          <a class="marea-fp__card" href="{{ product.url }}" {{ block.shopify_attributes }}>
+            <div class="marea-fp__media">
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400,600,900', alt: product.title }}
+                {%- if product.featured_image -%}
+                  {{ product.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400,600,900', class: 'marea-fp__media--hover', alt: product.title }}
+                {%- endif -%}
+              {%- elsif product.featured_image -%}
+                {{ product.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400,600,900', alt: product.title }}
+                {%- if product.images[1] and section.settings.show_secondary_image -%}
+                  {{ product.images[1] | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400,600,900', class: 'marea-fp__media--hover', alt: product.title }}
+                {%- endif -%}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag }}
+              {%- endif -%}
+            </div>
+            {%- if section.settings.show_titles -%}
+              <span class="marea-fp__title">{{ product.title }}</span>
+            {%- endif -%}
+            {%- if section.settings.show_prices -%}
+              <span class="marea-fp__price">
+                {%- if product.compare_at_price > product.price -%}
+                  <s>{{ product.compare_at_price | money }}</s>&nbsp;
+                {%- endif -%}
+                {{ product.price | money }}
+              </span>
+            {%- endif -%}
+          </a>
+        {%- else -%}
+          <div class="marea-fp__card" {{ block.shopify_attributes }}>
+            <div class="marea-fp__media">{{ 'product-1' | placeholder_svg_tag }}</div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Marea · Udvalgte varer",
+  "class": "shopify-section--marea-featured-products",
+  "tag": "section",
+  "max_blocks": 12,
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    { "type": "checkbox", "id": "separate_section_with_border", "label": "Adskil sektion med kant", "default": false },
+    { "type": "text", "id": "subheading", "label": "Underoverskrift", "default": "Bestsellers" },
+    { "type": "text", "id": "title", "label": "Overskrift", "default": "Vores favoritter" },
+    { "type": "range", "id": "products_per_row_desktop", "label": "Produkter pr. række (desktop)", "min": 2, "max": 5, "step": 1, "default": 4 },
+    { "type": "range", "id": "products_per_row_mobile", "label": "Produkter pr. række (mobil)", "min": 1, "max": 2, "step": 1, "default": 2 },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Billedformat",
+      "options": [
+        { "value": "3 / 4", "label": "Portræt (3:4)" },
+        { "value": "1 / 1", "label": "Kvadrat (1:1)" },
+        { "value": "4 / 5", "label": "Portræt (4:5)" }
+      ],
+      "default": "3 / 4"
+    },
+    { "type": "checkbox", "id": "show_titles", "label": "Vis produktnavne", "default": true },
+    { "type": "checkbox", "id": "show_prices", "label": "Vis priser", "default": true },
+    { "type": "checkbox", "id": "show_secondary_image", "label": "Vis billede 2 ved hover", "default": true },
+    { "type": "color", "id": "background", "label": "Baggrund" },
+    { "type": "color", "id": "text_color", "label": "Tekstfarve" }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Produkt",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Produkt" },
+        { "type": "image_picker", "id": "image", "label": "Miljøbillede (erstatter produktbilledet)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marea · Udvalgte varer",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}
