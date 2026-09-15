@@ -9,13 +9,10 @@
   {%- assign gap = 24 -%}
   <style>
     #shopify-section-{{ section.id }} .marea-fp__header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 24px;
+      position: relative;
+      text-align: center;
       margin-bottom: 32px;
       padding: 0 max(24px, 3vw);
-      text-align: left;
     }
     #shopify-section-{{ section.id }} .marea-fp__subheading {
       display: block;
@@ -26,14 +23,18 @@
     }
     #shopify-section-{{ section.id }} .marea-fp__wave {
       display: block;
-      margin: 10px 0 0;
+      margin: 10px auto 0;
     }
     #shopify-section-{{ section.id }} .marea-fp__arrows {
       display: none;
       gap: 8px;
-      flex-shrink: 0;
+      position: absolute;
+      right: max(24px, 3vw);
       /* pilene flugter i højde med underoverskriften (label ~19px vs. knap 40px) */
-      margin-top: -10px;
+      top: -10px;
+    }
+    #shopify-section-{{ section.id }} .marea-fp__arrows[hidden] {
+      display: none !important;
     }
     #shopify-section-{{ section.id }} .marea-fp__arrow {
       width: 40px;
@@ -60,15 +61,6 @@
     @media screen and (min-width: 1000px) {
       #shopify-section-{{ section.id }} .marea-fp__arrows {
         display: inline-flex;
-      }
-    }
-    @media screen and (max-width: 999px) {
-      #shopify-section-{{ section.id }} .marea-fp__header {
-        display: block;
-        text-align: center;
-      }
-      #shopify-section-{{ section.id }} .marea-fp__wave {
-        margin: 10px auto 0;
       }
     }
     #shopify-section-{{ section.id }} .marea-fp__track {
@@ -140,7 +132,7 @@
   >
     <marea-fp-carousel>
       <div class="marea-fp__header">
-        <div>
+        <div class="marea-fp__heading-group">
           {%- if section.settings.subheading != blank -%}
             <span class="marea-fp__subheading">{{ section.settings.subheading }}</span>
           {%- endif -%}
@@ -225,9 +217,11 @@
         }
         updateButtons() {
           if (!this.buttons.length) return;
-          const max = this.track.scrollWidth - this.track.clientWidth - 2;
+          const overflow = this.track.scrollWidth - this.track.clientWidth;
+          const wrap = this.querySelector('.marea-fp__arrows');
+          if (wrap) wrap.toggleAttribute('hidden', overflow <= 2);
           this.buttons[0].toggleAttribute('disabled', this.track.scrollLeft <= 2);
-          this.buttons[1].toggleAttribute('disabled', this.track.scrollLeft >= max);
+          this.buttons[1].toggleAttribute('disabled', this.track.scrollLeft >= overflow - 2);
         }
       });
     }
