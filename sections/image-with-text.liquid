@@ -20,6 +20,12 @@
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
   <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    {%- if section.settings.image_fill -%}
+      <style>
+        #shopify-section-{{ section.id }} .image-with-text picture { width: 100%; height: 100%; }
+        #shopify-section-{{ section.id }} .image-with-text picture img { width: 100%; height: 100%; object-fit: cover; }
+      </style>
+    {%- endif -%}
     <image-with-text class="image-with-text {% if section.settings.image_position == 'end' %}image-with-text--reverse{% endif %}">
       {%- if section.settings.image != blank -%}
         <picture>
@@ -150,6 +156,12 @@
       "id": "reveal_on_scroll",
       "label": "t:global.animation.reveal_image_on_scroll",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "image_fill",
+      "label": "Billede i fuld bredde (fyld halvdelen helt ud)",
+      "default": false
     },
     {
       "type": "select",
