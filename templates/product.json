@@ -74,7 +74,7 @@
         "feature-3": {
           "type": "feature_with_icon",
           "settings": {
-            "text": "18K guldbelagt rustfrit stål",
+            "text": "Behold det på i badet, havet og hverdagen",
             "metafield_key": "feature_3",
             "link": "",
             "icon": "none",
@@ -97,12 +97,12 @@
             "tile_size_mobile": 96,
             "gap": 12,
             "border_radius": 0,
+            "border_width": 1,
+            "border_width_active": 1,
             "tile_background": "#f3f3f3",
             "border_color": "#e5e5e5",
             "border_color_hover": "#cfcfcf",
-            "border_color_active": "#000000",
-            "border_width": 1,
-            "border_width_active": 1
+            "border_color_active": "#000000"
           }
         },
         "variant_picker": {
