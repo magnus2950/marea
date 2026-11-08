@@ -191,7 +191,7 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "armband",
+            "collection": "amber",
             "products_count": 8,
             "title": "",
             "link_url": "shopify://collections/armband",
@@ -212,7 +212,7 @@
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
         "subheading": "",
-        "title": "Sommerfavoritter",
+        "title": "Seneste nyheder",
         "hide_collection_title": false
       }
     },
