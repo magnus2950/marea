@@ -63,7 +63,7 @@
           "type": "collection",
           "settings": {
             "collection": "nyheder",
-            "products_count": 8,
+            "products_count": 12,
             "title": "New Arrivals",
             "link_url": "",
             "link_text": "Se hele kollektionen"
@@ -78,12 +78,12 @@
         "color_scheme": "",
         "separate_section_with_border": true,
         "hide_product_information": false,
-        "stack_products": false,
+        "stack_products": true,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": "New Arrivals",
+        "subheading": "Nyheder",
         "title": "",
         "hide_collection_title": true
       }
@@ -130,6 +130,7 @@
         "column-2",
         "column-3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
