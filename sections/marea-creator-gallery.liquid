@@ -1,0 +1,215 @@
+{%- comment -%}
+  MAREA · CREATOR-GALLERI
+  Uendelig, vandret karrusel med høje billed- og videokort (UGC/creator-indhold).
+  Porteret fra Pure by Nats "Marquee model slider" og tilpasset Marea's CVI.
+  Indholdet duplikeres 1:1, så loopet er sømløst.
+{%- endcomment -%}
+
+{%- liquid
+  assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5
+  if section.settings.speed_mode == 'fast'
+    assign duration = section.settings.speed_fast
+  else
+    assign duration = section.settings.speed_slow
+  endif
+-%}
+
+{%- capture items -%}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'image' -%}
+        {%- if block.settings.image != blank -%}
+          <div class="marea-cg__item" role="listitem" {{ block.shopify_attributes }}>
+            {{- block.settings.image | image_url: width: 1200 | image_tag:
+              loading: 'lazy',
+              widths: '400,600,800,1200',
+              sizes: '(max-width: 699px) 50vw, 25vw',
+              alt: block.settings.alt
+            -}}
+          </div>
+        {%- else -%}
+          <div class="marea-cg__item marea-cg__item--placeholder" role="listitem" {{ block.shopify_attributes }}>
+            {{- 'lifestyle-1' | placeholder_svg_tag -}}
+          </div>
+        {%- endif -%}
+      {%- when 'video' -%}
+        {%- if block.settings.video != blank -%}
+          <div class="marea-cg__item" role="listitem" {{ block.shopify_attributes }}>
+            {{- block.settings.video | video_tag:
+              autoplay: true,
+              loop: true,
+              muted: true,
+              controls: false,
+              playsinline: true,
+              preload: 'metadata'
+            -}}
+          </div>
+        {%- endif -%}
+    {%- endcase -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+<style>
+  #marea-cg-{{ section.id }} {
+    --marea-cg-gap: {{ section.settings.gap }}px;
+    --marea-cg-height: {{ section.settings.item_height }}px;
+    --marea-cg-radius: {{ section.settings.radius }}px;
+    --marea-cg-duration: {{ duration }}s;
+    padding-block: {{ section.settings.padding_top }}px {{ section.settings.padding_bottom }}px;
+  }
+  #marea-cg-{{ section.id }} .marea-cg__viewport {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    isolation: isolate;
+  }
+  #marea-cg-{{ section.id }} .marea-cg__track {
+    display: flex;
+    width: max-content;
+    animation: marea-cg-scroll var(--marea-cg-duration) linear infinite;
+  }
+  #marea-cg-{{ section.id }} .marea-cg__viewport--pauseable:hover .marea-cg__track {
+    animation-play-state: paused;
+  }
+  #marea-cg-{{ section.id }} .marea-cg__group {
+    display: flex;
+    align-items: center;
+    gap: var(--marea-cg-gap);
+    margin-inline-end: var(--marea-cg-gap);
+  }
+  #marea-cg-{{ section.id }} .marea-cg__item {
+    flex: 0 0 auto;
+    display: block;
+  }
+  #marea-cg-{{ section.id }} .marea-cg__item img,
+  #marea-cg-{{ section.id }} .marea-cg__item video,
+  #marea-cg-{{ section.id }} .marea-cg__item svg {
+    display: block;
+    height: var(--marea-cg-height);
+    width: calc(var(--marea-cg-height) * 0.5625);
+    object-fit: cover;
+    border-radius: var(--marea-cg-radius);
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+  #marea-cg-{{ section.id }} .marea-cg__item--placeholder svg {
+    background: rgb(var(--text-color) / 0.08);
+    fill: rgb(var(--text-color) / 0.35);
+  }
+  {%- if section.settings.edge_fade -%}
+    #marea-cg-{{ section.id }} .marea-cg__viewport::before,
+    #marea-cg-{{ section.id }} .marea-cg__viewport::after {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      width: clamp(16px, 6vw, 80px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    #marea-cg-{{ section.id }} .marea-cg__viewport::before {
+      left: 0;
+      background: linear-gradient(to right, rgb(var(--background)) 0%, transparent 100%);
+    }
+    #marea-cg-{{ section.id }} .marea-cg__viewport::after {
+      right: 0;
+      background: linear-gradient(to left, rgb(var(--background)) 0%, transparent 100%);
+    }
+  {%- endif -%}
+  @keyframes marea-cg-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #marea-cg-{{ section.id }} .marea-cg__track { animation-play-state: paused; }
+  }
+  @media screen and (max-width: 699px) {
+    #marea-cg-{{ section.id }} {
+      --marea-cg-gap: calc({{ section.settings.gap }}px * 0.6);
+      --marea-cg-height: calc({{ section.settings.item_height }}px * 0.7);
+    }
+  }
+</style>
+
+<div
+  id="marea-cg-{{ section.id }}"
+  class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}"
+>
+  {%- if section.blocks.size > 0 -%}
+    <div
+      class="marea-cg__viewport{% if section.settings.pause_on_hover %} marea-cg__viewport--pauseable{% endif %}"
+      aria-label="{{ section.settings.aria_label | escape }}"
+    >
+      <div class="marea-cg__track">
+        <div class="marea-cg__group" role="list">{{ items }}</div>
+        <div class="marea-cg__group" aria-hidden="true">
+          {{- items | remove: 'role="listitem"' | replace: 'data-shopify-editor-block', 'data-marea-cg-clone' -}}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Marea · Creator-galleri",
+  "class": "shopify-section--marea-creator-gallery",
+  "tag": "section",
+  "max_blocks": 20,
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Farveskema", "default": "scheme-1" },
+    {
+      "type": "select",
+      "id": "speed_mode",
+      "label": "Hastighed",
+      "options": [
+        { "value": "slow", "label": "Langsom" },
+        { "value": "fast", "label": "Hurtig" }
+      ],
+      "default": "slow"
+    },
+    { "type": "range", "id": "speed_slow", "label": "Langsom: sekunder pr. loop", "min": 10, "max": 100, "step": 2, "unit": "s", "default": 80 },
+    { "type": "range", "id": "speed_fast", "label": "Hurtig: sekunder pr. loop", "min": 6, "max": 40, "step": 2, "unit": "s", "default": 24 },
+    { "type": "checkbox", "id": "pause_on_hover", "label": "Pause ved hover", "default": true },
+    { "type": "range", "id": "item_height", "label": "Højde på billeder/videoer (desktop)", "min": 200, "max": 600, "step": 10, "unit": "px", "default": 480 },
+    { "type": "range", "id": "gap", "label": "Mellemrum", "min": 0, "max": 60, "step": 2, "unit": "px", "default": 20 },
+    { "type": "range", "id": "radius", "label": "Hjørne-radius", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 20 },
+    { "type": "checkbox", "id": "edge_fade", "label": "Blød fade i kanterne", "default": false },
+    { "type": "range", "id": "padding_top", "label": "Luft over", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "label": "Luft under", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 24 },
+    { "type": "text", "id": "aria_label", "label": "Tilgængeligheds-label", "default": "Karrusel med billeder og videoer fra Marea-creators" }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Billede",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Billede" },
+        { "type": "text", "id": "alt", "label": "Alt-tekst", "default": "Marea-smykker båret af en creator" }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Video (MP4)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marea · Creator-galleri",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}
