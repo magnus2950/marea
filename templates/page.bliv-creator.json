@@ -1,9 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "show_title": true,
+        "page_width": "xs"
+      }
     },
     "intro": {
       "type": "rich-text",
@@ -22,7 +35,10 @@
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
@@ -34,16 +50,57 @@
     "gallery_top": {
       "type": "marea-creator-gallery",
       "blocks": {
-        "img_1": { "type": "image", "settings": { "image": "shopify://shop_images/58_solrige_strandhaand_med_smykker_shopify.jpg", "alt": "Marea-smykker i solen ved stranden" } },
-        "img_2": { "type": "image", "settings": { "image": "shopify://shop_images/65_sommer_selfie_ved_stranden_shopify.jpg", "alt": "Sommerselfie ved stranden med Marea-smykker" } },
-        "img_3": { "type": "image", "settings": { "image": "shopify://shop_images/marea-lifestyle-waterside.jpg", "alt": "Marea-smykker ved vandet" } },
-        "img_4": { "type": "image", "settings": { "image": "shopify://shop_images/73_sommerstemning_ved_poolkanten_shopify.jpg", "alt": "Sommerstemning ved poolkanten" } },
-        "img_5": { "type": "image", "settings": { "image": "shopify://shop_images/Billede_27.05.2026_10.54.49.jpg", "alt": "Marea-smykker i hverdagen" } },
-        "img_6": { "type": "image", "settings": { "image": "shopify://shop_images/74_sommertoej_med_smykker_og_detaljer_shopify.jpg", "alt": "Sommertøj med Marea-smykker" } },
-        "img_7": { "type": "image", "settings": { "image": "shopify://shop_images/marea-lifestyle-sport.jpg", "alt": "Marea-smykker i bevægelse" } },
-        "img_8": { "type": "image", "settings": { "image": "shopify://shop_images/Billede_27.05.2026_16.53.33.jpg", "alt": "Marea-smykker tæt på" } }
+        "img_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_13.21.26.jpg",
+            "alt": "Marea-smykker i solen ved stranden"
+          }
+        },
+        "img_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_14.13.44.jpg",
+            "alt": "Sommerselfie ved stranden med Marea-smykker"
+          }
+        },
+        "img_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_14.23.04.jpg",
+            "alt": "Marea-smykker ved vandet"
+          }
+        },
+        "img_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6124.jpg",
+            "alt": "Sommerstemning ved poolkanten"
+          }
+        },
+        "img_5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_13.47.59.jpg",
+            "alt": "Marea-smykker i hverdagen"
+          }
+        },
+        "img_6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_14.02.47.jpg",
+            "alt": "Sommertøj med Marea-smykker"
+          }
+        }
       },
-      "block_order": ["img_1", "img_2", "img_3", "img_4", "img_5", "img_6", "img_7", "img_8"],
+      "block_order": [
+        "img_1",
+        "img_2",
+        "img_3",
+        "img_4",
+        "img_5",
+        "img_6"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "speed_mode": "slow",
@@ -69,7 +126,9 @@
           }
         }
       },
-      "block_order": ["text"],
+      "block_order": [
+        "text"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
@@ -90,10 +149,12 @@
           }
         }
       },
-      "block_order": ["profile_link"],
+      "block_order": [
+        "profile_link"
+      ],
       "custom_css": [
-        ".button[type=submit] {background: #042a53; border-color: #042a53; color: #fffdf9;}",
-        ".button[type=submit]:hover {background: #0a3b70; border-color: #0a3b70; color: #fffdf9;}"
+        ".button[type=\"submit\"] {background: #042a53; border-color: #042a53; color: #fffdf9;}",
+        ".button[type=\"submit\"]:hover {background: #0a3b70; border-color: #0a3b70; color: #fffdf9;}"
       ],
       "settings": {
         "color_scheme": "scheme-1",
@@ -113,7 +174,9 @@
           }
         }
       },
-      "block_order": ["text"],
+      "block_order": [
+        "text"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
@@ -122,19 +185,60 @@
         "remove_vertical_spacing": false
       }
     },
-    "gallery_bottom": {
+    "marea_creator_gallery_hn8TDz": {
       "type": "marea-creator-gallery",
       "blocks": {
-        "img_1": { "type": "image", "settings": { "image": "shopify://shop_images/Billede_27.05.2026_16.53.33.jpg", "alt": "Marea-smykker tæt på" } },
-        "img_2": { "type": "image", "settings": { "image": "shopify://shop_images/marea-lifestyle-sport.jpg", "alt": "Marea-smykker i bevægelse" } },
-        "img_3": { "type": "image", "settings": { "image": "shopify://shop_images/74_sommertoej_med_smykker_og_detaljer_shopify.jpg", "alt": "Sommertøj med Marea-smykker" } },
-        "img_4": { "type": "image", "settings": { "image": "shopify://shop_images/Billede_27.05.2026_10.54.49.jpg", "alt": "Marea-smykker i hverdagen" } },
-        "img_5": { "type": "image", "settings": { "image": "shopify://shop_images/73_sommerstemning_ved_poolkanten_shopify.jpg", "alt": "Sommerstemning ved poolkanten" } },
-        "img_6": { "type": "image", "settings": { "image": "shopify://shop_images/marea-lifestyle-waterside.jpg", "alt": "Marea-smykker ved vandet" } },
-        "img_7": { "type": "image", "settings": { "image": "shopify://shop_images/65_sommer_selfie_ved_stranden_shopify.jpg", "alt": "Sommerselfie ved stranden med Marea-smykker" } },
-        "img_8": { "type": "image", "settings": { "image": "shopify://shop_images/58_solrige_strandhaand_med_smykker_shopify.jpg", "alt": "Marea-smykker i solen ved stranden" } }
+        "image_HUXnM6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_13.21.26.jpg",
+            "alt": "Marea-smykker i solen ved stranden"
+          }
+        },
+        "image_xMdXTN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_14.13.44.jpg",
+            "alt": "Sommerselfie ved stranden med Marea-smykker"
+          }
+        },
+        "image_4HxpPg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_14.23.04.jpg",
+            "alt": "Marea-smykker ved vandet"
+          }
+        },
+        "image_FMQtNU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6124.jpg",
+            "alt": "Sommerstemning ved poolkanten"
+          }
+        },
+        "image_Bfty8z": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_13.47.59.jpg",
+            "alt": "Marea-smykker i hverdagen"
+          }
+        },
+        "image_9BzDBc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Billede_25.08.2026_14.02.47.jpg",
+            "alt": "Sommertøj med Marea-smykker"
+          }
+        }
       },
-      "block_order": ["img_1", "img_2", "img_3", "img_4", "img_5", "img_6", "img_7", "img_8"],
+      "block_order": [
+        "image_HUXnM6",
+        "image_xMdXTN",
+        "image_4HxpPg",
+        "image_FMQtNU",
+        "image_Bfty8z",
+        "image_9BzDBc"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "speed_mode": "slow",
@@ -146,10 +250,18 @@
         "radius": 20,
         "edge_fade": false,
         "padding_top": 8,
-        "padding_bottom": 48,
+        "padding_bottom": 8,
         "aria_label": "Karrusel med billeder og videoer fra Marea-creators"
       }
     }
   },
-  "order": ["main", "intro", "gallery_top", "details", "form", "outro", "gallery_bottom"]
+  "order": [
+    "main",
+    "intro",
+    "gallery_top",
+    "details",
+    "form",
+    "outro",
+    "marea_creator_gallery_hn8TDz"
+  ]
 }
