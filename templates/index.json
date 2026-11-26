@@ -15,11 +15,11 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/marea-hero-aw26-tablet-1280x720.png",
-            "mobile_image": "shopify://shop_images/marea-hero-aw26-mobil-1080x1350.png",
+            "image": "shopify://shop_images/MAREA-hero-desktop-1920x800.jpg",
+            "mobile_image": "shopify://shop_images/MAREA-hero-mobil-1080x1350.jpg",
             "subheading": "",
-            "content": "<p>AW26 — Smykker du kan beholde på</p>",
-            "title": "<strong>AW26 Nyheder</strong>",
+            "content": "<h5>Smykker til de øjeblikke, der betyder noget</h5>",
+            "title": "<strong>Sparkling Christmas</strong>",
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "content_max_width": 1200,
