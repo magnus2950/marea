@@ -191,10 +191,10 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "amber",
+            "collection": "nyheder",
             "products_count": 8,
             "title": "",
-            "link_url": "shopify://collections/nyheder",
+            "link_url": "",
             "link_text": "Se hele kollektionen"
           }
         }
